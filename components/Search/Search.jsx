@@ -4,6 +4,6 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 
 export default Search = () => {
   return (
-    <Text>I am an search.</Text>
+    <Text>I am search.</Text>
   )
 };
