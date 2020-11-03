@@ -17,7 +17,10 @@ class App extends Component {
 
   render() {
     return (
-      <Search></Search>
+      <View style={styles.wrapper}>
+        <Search></Search>
+        <Slider></Slider>
+      </View>
     )
   }
 }
@@ -25,6 +28,10 @@ class App extends Component {
 const styles = StyleSheet.create({
   helloText: {
     marginTop: 15,
+  },
+
+  wrapper: {
+
   }
 
 });
