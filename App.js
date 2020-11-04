@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar'
 import React, { Component } from 'react'
 import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView } from 'react-native'
 
-import Search from './components/Search'
+import Header from './components/Header'
 import Slider from './components/Slider'
 
 
@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <SafeAreaView>
         <View style={styles.wrapper}>
-          <Search></Search>
+          <Header></Header>
           <Slider></Slider>
         </View>
       </SafeAreaView>
