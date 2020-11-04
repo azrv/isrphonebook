@@ -9,7 +9,7 @@ export default Slider = ({ items }) => {
     <View style={sliderStyles.sliderContainer}>
       <ScrollView
         horizontal
-        snapToInterval={width * 0.655}
+        snapToInterval={width * 0.65 + 15}
         decelerationRate="fast"
         showsHorizontalScrollIndicator={false}
       >
