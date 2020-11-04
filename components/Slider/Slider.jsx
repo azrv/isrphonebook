@@ -1,25 +1,32 @@
-import { StatusBar } from 'expo-status-bar'
-import React, { Component } from 'react'
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
+import React from 'react'
+import { StyleSheet, Text, View, Image} from 'react-native'
 
-export default Slider = () => {
+export default Slider = ({ items }) => {
   return (
     <View style={sliderStyles.sliderContainer}>
-      <View style={sliderStyles.sliderCard}>
-        <View style={sliderStyles.cardImage}>
-          <Text>Card Image</Text>
+      {items.map((item, index) => (
+
+        <View key={index} style={sliderStyles.sliderCard}>
+          <Image
+            style={sliderStyles.cardImage}
+            source={{
+              uri: item.image
+            }}
+          />
+          <Text style={sliderStyles.cardTitle}>{item.title}</Text>
         </View>
-        <Text style={sliderStyles.cardTitle}>Card Title</Text>
-      </View>
-      <View style={sliderStyles.sliderCard}>
-        <View style={sliderStyles.cardImage}>
-          <Text>Card Image2</Text>
-        </View>
-        <Text style={sliderStyles.cardTitle}>Card Title2</Text>
-      </View>
+
+      ))}
     </View>
   )
 };
+
+Slider.defaultProps = {
+  items: [{
+      image: 'Default Image',
+      title: 'Default Title',
+  }]
+}
 
 const sliderStyles = StyleSheet.create({
   sliderContainer: {
@@ -31,8 +38,8 @@ const sliderStyles = StyleSheet.create({
     height: 250,
   },
   cardImage: {
-    backgroundColor:'red',
     height:200,
+    
   },
   cardTitle: {
     backgroundColor:'#6c6c6c',
