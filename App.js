@@ -22,13 +22,21 @@ class App extends Component {
           <Header />
           <Slider items={[
             {
-              image: 'https://cdn.discordapp.com/attachments/755795252224196770/772873076257456128/download.jpeg',
-              title: 'Title1'
+              image: 'https://im.kommersant.ru/Issues.photo/CORP/2019/12/12/KMO_163712_00083_1_t241_060345.jpg',
+              title: 'Israel Government'
             },
             {
-              image: 'https://im.kommersant.ru/Issues.photo/CORP/2019/12/12/KMO_163712_00083_1_t241_060345.jpg',
-              title: 'Title2'
-            }
+              image: 'https://www.shebaonline.ru/wp-content/uploads/2017/02/heart-center.jpg',
+              title: 'Hospital'
+            },
+            {
+              image: 'https://images.adsttc.com/media/images/51d4/84a8/b3fc/4bea/e100/01d6/large_jpg/Portada.jpg?1372882078',
+              title: 'Office Building'
+            },
+            {
+              image: 'https://images.adsttc.com/media/images/5e4c/1025/6ee6/7e0b/9d00/0877/large_jpg/feature_-_Main_hall_1.jpg?1582043123',
+              title: 'Cafeteria'
+            },
           ]} />
           <StatusBar />
         </View>
@@ -39,7 +47,7 @@ class App extends Component {
 
 const styles = StyleSheet.create({
   wrapper: {
-    padding: 30,
+    padding: 0,
   },
 
 });

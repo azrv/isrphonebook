@@ -1,29 +1,40 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image} from 'react-native'
+import { StyleSheet, Text, View, Image, Dimensions } from 'react-native'
+import { ScrollView } from "react-native-gesture-handler"
+
+const { width, height } = Dimensions.get("window");
 
 export default Slider = ({ items }) => {
   return (
     <View style={sliderStyles.sliderContainer}>
+      <ScrollView
+        horizontal
+        snapToInterval={width * 0.655}
+        decelerationRate="fast"
+        showsHorizontalScrollIndicator={false}
+      >
       {items.map((item, index) => (
-
-        <View key={index} style={sliderStyles.sliderCard}>
+        <View
+          key={index}
+          style={ (index === items.length - 1) ? sliderStyles.lastSliderCard : sliderStyles.sliderCard}
+        >
           <Image
             style={sliderStyles.cardImage}
             source={{
               uri: item.image
             }}
           />
-          <Text style={sliderStyles.cardTitle}>{item.title}</Text>
+          <Text style={sliderStyles.cardTitle}>{item.title} {/*(ID:{index})*/}</Text>
         </View>
-
       ))}
+      </ScrollView>
     </View>
   )
 };
 
 Slider.defaultProps = {
   items: [{
-      image: 'Default Image',
+      image: 'Default image url',
       title: 'Default Title',
   }]
 }
@@ -31,19 +42,24 @@ Slider.defaultProps = {
 const sliderStyles = StyleSheet.create({
   sliderContainer: {
     marginTop: 20,
-    backgroundColor:'#6c6c6c',
+    marginLeft: 30,
   },
   sliderCard: {
-    backgroundColor:'#ddd',
-    height: 250,
+    marginRight: 15,
+    width: width * 0.65,
+  },
+  lastSliderCard: {
+    marginRight: 30,
+    width: width * 0.65,
   },
   cardImage: {
-    height:200,
-    
+    height: height * 0.24,
+    borderRadius: 7,
   },
   cardTitle: {
-    backgroundColor:'#6c6c6c',
-    textAlign: 'center',
-    height:50,
+    fontWeight: '500',
+    color: '#222',
+    fontSize: 20,
+    marginTop: 10,
   },
 });
