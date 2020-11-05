@@ -39,16 +39,13 @@ const headerStyles = StyleSheet.create({
   },
   searchText: {
     justifyContent: 'center',
-    //backgroundColor: 'cyan',
     flex: 1,
     fontSize: 16,
     color: '#6c6c6c',
-    //marginRight:15,
     height: 60,
   },
   searchIcon: {
     justifyContent: 'center',
-    //backgroundColor: 'red',
     fontSize: 18,
     color: '#6c6c6c',
     marginRight:5,

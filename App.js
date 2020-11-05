@@ -18,14 +18,13 @@ class App extends Component {
 
   render() {
     return (
-      <SafeAreaView>
-          <Header />
-          <ScrollView
-            style={styles.scrollViewContainer}
-            decelerationRate="fast"
-            showsHorizontalScrollIndicator={false}
-          >
-
+      <SafeAreaView style={styles.wrapper}>
+        <Header />
+        <ScrollView
+          style={styles.scrollViewContainer}
+          decelerationRate="fast"
+          showsHorizontalScrollIndicator={false}
+        >
           <Text style={styles.title}>Government</Text>
           <Slider items={[
             {
@@ -65,7 +64,7 @@ class App extends Component {
             },
           ]} />
           <Text style={styles.primaryTitle}>Socialities</Text>
-          <Slider items={[
+          <Slider style={{marginBottom:0}} items={[
             {
               image: 'https://shalomisraeltours.com/wp-content/uploads/2019/06/Gan-HaShlosha.jpg',
               title: 'National Park of Israel'
@@ -84,8 +83,12 @@ class App extends Component {
             },
           ]} />
 
-          </ScrollView>
+        </ScrollView>
+        <View style ={{flex: 1}}>
+          <Text>Bottom</Text>
+        </View>
       </SafeAreaView>
+
     )
   }
 }
@@ -94,6 +97,9 @@ const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
   },
+  scrollViewContainer: {
+    marginTop: 30,
+  },
   title: {
     marginLeft: 30,
     marginRight: 30,
@@ -101,17 +107,13 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   primaryTitle: {
-    marginTop: 30,
+    marginTop: 15,
     marginLeft: 30,
     marginRight: 30,
     fontSize: 26,
     fontWeight: '700',
   },
-  scrollViewContainer: {
-    //flex: 1,
-    marginTop: 30,
-    marginBottom: 100,
-  },
+
 });
 
 export default App;
