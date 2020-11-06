@@ -6,7 +6,7 @@ const { width, height } = Dimensions.get("window");
 
 {/*snapToInterval={width * 0.65 + 15}*/}
 
-export default Slider = ({ items }) => {
+const Slider = ({ items }) => {
   return (
     <View style={sliderStyles.sliderContainer}>
       <ScrollView
@@ -66,3 +66,6 @@ const sliderStyles = StyleSheet.create({
     marginBottom: 15,
   },
 });
+
+
+export default Slider;

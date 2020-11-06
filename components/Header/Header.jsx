@@ -3,8 +3,9 @@ import React, { Component } from 'react'
 import { StyleSheet, Text, View, TouchableOpacity, TextInput } from 'react-native'
 import { SearchBar } from 'react-native-elements'
 import Icon from 'react-native-vector-icons/MaterialIcons'
+import { ServerContainer } from '@react-navigation/native'
 
-export default Search = () => {
+const Header = () => {
   return (
     <View style={headerStyles.headerContainer}>
       <View style={headerStyles.searchContainer}>
@@ -51,3 +52,5 @@ const headerStyles = StyleSheet.create({
     marginRight:5,
   }
 });
+
+export default Header;
