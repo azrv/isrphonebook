@@ -1,6 +1,5 @@
-import { StatusBar } from 'expo-status-bar'
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView, Dimensions, ScrollView } from 'react-native'
+import { StatusBar, StyleSheet, Text, View, TouchableOpacity, SafeAreaView, Dimensions, ScrollView } from 'react-native'
 
 import Header from './components/Header'
 import Slider from './components/Slider'
@@ -19,6 +18,7 @@ class App extends Component {
   render() {
     return (
       <SafeAreaView style={styles.wrapper}>
+        <StatusBar backgroundColor='#fff'/>
         <Header />
         <ScrollView
           style={styles.scrollViewContainer}
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   scrollViewContainer: {
-    marginTop: Platform.OS === 'android' ? 50 : 30,
+    marginTop: 30,
   },
   title: {
     marginLeft: 30,
