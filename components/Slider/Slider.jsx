@@ -4,14 +4,12 @@ import { ScrollView } from "react-native-gesture-handler"
 
 const { width, height } = Dimensions.get("window");
 
-{/*snapToInterval={width * 0.65 + 15}*/}
-
 export default Slider = ({ items }) => {
   return (
     <View style={sliderStyles.sliderContainer}>
       <ScrollView
         horizontal
-
+        snapToInterval={width * 0.65 + 15}
         decelerationRate="fast"
         showsHorizontalScrollIndicator={false}
       >

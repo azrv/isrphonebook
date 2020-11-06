@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   scrollViewContainer: {
-    marginTop: 30,
+    marginTop: Platform.OS === 'android' ? 50 : 30,
   },
   title: {
     marginLeft: 30,
