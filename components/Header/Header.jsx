@@ -14,6 +14,7 @@ const Header = () => {
           style={headerStyles.searchText}
           placeholder="Start your search"
           placeholderTextColor="#6c6c6c"
+          returnKeyType={"search"}
         />
       </View>
     </View>

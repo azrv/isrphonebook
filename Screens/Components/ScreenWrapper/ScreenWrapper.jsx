@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Header from '../../../components/Header'
-import { View, SafeAreaView } from 'react-native';
+import { View, SafeAreaView, StatusBar } from 'react-native';
 
 import styles from './styles';
 
@@ -10,6 +10,7 @@ const ScreenWrapper = ({
 }) => {
   return (
     <SafeAreaView styles={styles.ScreenWrapper}>
+      <StatusBar backgroundColor='#fff'/>
       <Header />
       <View>
         {children}
