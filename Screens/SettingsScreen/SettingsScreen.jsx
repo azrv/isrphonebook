@@ -8,9 +8,9 @@ import {
 const OrgScreen = () => {
   return (
     <ScreenWrapper>
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'white' }}>
-        <Text style={{ fontSize: 20 }}>I'am organisation screen.</Text>
-      </View>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'white' }}>
+      <Text style={{ fontSize: 20 }}>I'am settings screen.</Text>
+    </View>
     </ScreenWrapper>
   )
 };

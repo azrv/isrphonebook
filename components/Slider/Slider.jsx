@@ -60,7 +60,7 @@ const sliderStyles = StyleSheet.create({
   },
   cardTitle: {
     fontWeight: '500',
-    color: '#222',
+    color: '#000',
     fontSize: 20,
     marginTop: 10,
     marginBottom: 15,

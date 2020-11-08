@@ -9,13 +9,11 @@ const ScreenWrapper = ({
   children,
 }) => {
   return (
-    <SafeAreaView styles={styles.ScreenWrapper}>
+    <>
       <StatusBar backgroundColor='#fff'/>
       <Header />
-      <View>
-        {children}
-      </View>
-    </SafeAreaView>
+      {children}
+    </>
   )
 };
 
