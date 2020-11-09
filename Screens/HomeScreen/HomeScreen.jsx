@@ -54,7 +54,7 @@ const HomeScreen = () => {
           },
         ]} />
         <Text style={styles.primaryTitle}>Socialities</Text>
-        <Slider style={{marginBottom:0}} items={[
+        <Slider last items={[
           {
             image: 'https://shalomisraeltours.com/wp-content/uploads/2019/06/Gan-HaShlosha.jpg',
             title: 'National Park of Israel'
@@ -83,9 +83,6 @@ const styles = StyleSheet.create({
     paddingTop:20,
     zIndex: 100,
     backgroundColor: 'white'
-  },
-  lastSlider: {
-    marginBottom: 20,
   },
   title: {
     marginLeft: 30,

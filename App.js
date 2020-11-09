@@ -4,7 +4,7 @@ import {
   SafeAreaView
 } from 'react-native-safe-area-context';
 
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import { Ionicons } from '@expo/vector-icons';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -29,14 +29,14 @@ const App = () => {
 
                 if (route.name === 'PhoneBook') {
                   iconName = focused ?
-                    'ios-information-circle'
+                    'ios-albums'
                   :
-                    'ios-information-circle-outline';
+                    'ios-albums';
                 } else if (route.name === 'Organisation') {
                   iconName = focused ?
                     'ios-list-box'
                   :
-                    'ios-list';
+                    'ios-list-box';
                 } else if (route.name === 'Settings') {
                   iconName = focused ?
                     'ios-settings'
@@ -48,6 +48,11 @@ const App = () => {
                 return <Ionicons name={iconName} size={size} color={color} />;
               },
             })}
+
+            tabBarOptions={{
+              activeTintColor: '#0F4C81',
+              inactiveTintColor: '#666',
+            }}
           >
             <Tab.Screen
               name="PhoneBook"

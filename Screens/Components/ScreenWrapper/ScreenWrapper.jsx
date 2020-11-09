@@ -10,7 +10,7 @@ const ScreenWrapper = ({
 }) => {
   return (
     <>
-      <StatusBar backgroundColor='#fff'/>
+      {/*<StatusBar backgroundColor='#fff'/>*/}
       <Header />
       {children}
     </>
