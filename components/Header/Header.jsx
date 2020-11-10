@@ -4,32 +4,17 @@ import {
   Text,
   View,
   TouchableOpacity,
-  TextInput,
   Dimensions,
   Animated,
   Easing
 } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+
+import Search from '../Search';
 
 const { height } = Dimensions.get('window');
 
 const transformValue = new Animated.Value(height);
 const opacityValue = new Animated.Value(0);
-
-const onFocusAnimation = () => {
-  Animated.timing(transformValue, {
-    toValue: 0,
-    duration: 500,
-    useNativeDriver: true,
-    easing: Easing.in(Easing.elastic(0.7))
-  }).start();
-
-  Animated.timing(opacityValue, {
-    toValue: 1,
-    duration:400,
-    useNativeDriver: true,
-  }).start();
-};
 
 const onBlurAnimation = () => {
   Animated.timing(transformValue, {
@@ -54,27 +39,17 @@ const Header = () => {
     <>
       <View style={headerStyles.headerContainer}>
         <View style={headerStyles.searchContainer}>
-          <Icon name="search" style={headerStyles.searchIcon} />
-          <TextInput
-            style={headerStyles.searchText}
-            placeholder="Start your search"
-            placeholderTextColor="#fff"
-            returnKeyType={"search"}
-            onSubmitEditing={onFocusAnimation}
-            onChangeText={(value) => setKeyword(value)}
-          />
+          <Search onChange={setKeyword} />
         </View>
       </View>
 
-      <Animated.View style={[headerStyles.animatedView, {transform: [{ translateY: transformValue }], opacity: opacityValue}]}>
+      <Animated.View style={[ headerStyles.animatedView, { transform: [{ translateY: transformValue }], opacity: opacityValue } ]}>
         <View style={headerStyles.animatedViewContainer}>
           <TouchableOpacity onPress={onBlurAnimation} style={headerStyles.backButton}>
-            <Text style={{fontSize:22, fontWeight: "500", color: 'white'}}>BACK</Text>
+            <Text style={{ fontSize:22, fontWeight: "500", color: 'white' }}>BACK</Text>
           </TouchableOpacity>
 
-          <Text style={{fontSize:24}}>No searching functionality yet.</Text>
-
-
+          <Text style={{ fontSize:24 }}>No searching functionality yet.</Text>
         </View>
       </Animated.View>
     </>
@@ -108,20 +83,6 @@ const headerStyles = StyleSheet.create({
     opacity: 0.4,
     borderRadius: 40,
     height: 50,
-  },
-  searchText: {
-    justifyContent: 'center',
-    flex: 1,
-    fontSize: 16,
-    fontWeight: '600',
-    color: '#fff',
-    height: 60,
-  },
-  searchIcon: {
-    justifyContent: 'center',
-    fontSize: 18,
-    color: '#fff',
-    marginRight:5,
   },
   animatedView: {
     position: 'absolute',

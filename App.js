@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StatusBar } from 'react-native';
+import { StatusBar } from 'react-native';
 import Header from './components/Header'
 
 import {
@@ -9,14 +9,12 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import HomeScreen from './Screens/HomeScreen';
 import OrgScreen from './Screens/OrgScreen';
 import SettingsScreen from './Screens/SettingsScreen';
 
-const MainStack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const App = () => {
@@ -34,20 +32,11 @@ const App = () => {
                   let iconName;
 
                   if (route.name === 'PhoneBook') {
-                    iconName = focused ?
-                      'ios-albums'
-                    :
-                      'ios-albums';
+                    iconName = focused ? 'ios-albums' : 'ios-albums';
                   } else if (route.name === 'Organisation') {
-                    iconName = focused ?
-                      'ios-list-box'
-                    :
-                      'ios-list-box';
+                    iconName = focused ? 'ios-list-box' : 'ios-list-box';
                   } else if (route.name === 'Settings') {
-                    iconName = focused ?
-                      'ios-settings'
-                    :
-                      'ios-settings';
+                    iconName = focused ? 'ios-settings' : 'ios-settings';
                   }
 
                   // You can return any component that you like here!

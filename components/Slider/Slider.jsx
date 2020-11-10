@@ -21,7 +21,7 @@ const Slider = ({ items }) => {
           <Image
             style={sliderStyles.cardImage}
             source={{
-              uri: item.image
+              uri: item.images[0]
             }}
           />
           <Text style={sliderStyles.cardTitle}>{item.title} {/*(ID:{index})*/}</Text>
