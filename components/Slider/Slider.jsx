@@ -61,7 +61,6 @@ const sliderStyles = StyleSheet.create({
     color: '#333',
     fontSize: 20,
     marginTop: 10,
-    marginBottom: 15,
   },
 });
 

@@ -10,7 +10,7 @@ import Slider from '../../components/Slider';
 const HomeScreen = () => {
   return (
     <ScreenWrapper>
-      <Text style={styles.title}>Government</Text>
+      <Text style={styles.firstTitle}>Government</Text>
       <Slider items={[
         {
           image: 'https://im.kommersant.ru/Issues.photo/CORP/2019/12/12/KMO_163712_00083_1_t241_060345.jpg',
@@ -77,6 +77,12 @@ const styles = StyleSheet.create({
     paddingTop: 20,
   },
   title: {
+    marginBottom: 10,
+    marginTop: 25,
+    fontSize: 26,
+    fontWeight: '700',
+  },
+  firstTitle: {
     marginBottom: 10,
     fontSize: 26,
     fontWeight: '700',

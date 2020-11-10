@@ -30,7 +30,7 @@ const wrapperStyles = StyleSheet.create({
     paddingTop:15,
     paddingLeft:15,
     paddingRight:15,
-    paddingBottom:5,
+    paddingBottom:25,
     backgroundColor: 'white',
   }
 });
