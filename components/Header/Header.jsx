@@ -89,7 +89,7 @@ const Header = () => {
 
 const headerStyles = StyleSheet.create({
   headerContainer: {
-    paddingTop: 5,
+    paddingTop: 15,
     paddingRight: 30,
     paddingLeft: 30,
     paddingBottom:15,
@@ -97,11 +97,11 @@ const headerStyles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     zIndex: 102,
-    shadowColor: '#000',
-    shadowOffset: { width: 1, height: 1 },
-    shadowOpacity:  0.4,
-    shadowRadius: 4,
-    elevation: 5,
+    // shadowColor: '#000',
+    // shadowOffset: { width: 1, height: 1 },
+    // shadowOpacity:  0.4,
+    // shadowRadius: 4,
+    // elevation: 5,
   },
   searchContainer: {
     paddingLeft: 30,

@@ -27,10 +27,10 @@ const wrapperStyles = StyleSheet.create({
     backgroundColor: '#0F4C81',
   },
   screenContainer: {
-    paddingTop:20,
-    paddingLeft:30,
-    paddingRight:30,
-    paddingBottom:20,
+    paddingTop:15,
+    paddingLeft:15,
+    paddingRight:15,
+    paddingBottom:5,
     backgroundColor: 'white',
   }
 });

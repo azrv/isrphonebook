@@ -16,7 +16,7 @@ const { width, height } = Dimensions.get("window");
 const OrgScreen = () => {
   return (
     <ScreenWrapper>
-      <View style={orgScreenStyles.content}>
+      <View style={orgScreenStyles.orgContainer}>
         <Image
           style={orgScreenStyles.orgImage}
           source={{
@@ -35,88 +35,93 @@ const OrgScreen = () => {
           laboris nisi ut aliquip ex ea commodo consequat.
           </Text>
         </View>
+      </View>
 
-        <View style={orgScreenStyles.requisitesContainer}>
-          <View style={orgScreenStyles.requisiteContainer}>
-            <Text style={orgScreenStyles.requisiteTitle}>
-              Phone Number
+      <View style={orgScreenStyles.requisitesContainer}>
+        <View style={orgScreenStyles.requisiteContainer}>
+          <Text style={orgScreenStyles.requisiteTitle}>
+            Phone Number
+          </Text>
+          <View style={orgScreenStyles.requisiteContentContainer}>
+            <Text style={orgScreenStyles.requisiteContent}>
+              +972-3-522-67-36
             </Text>
-            <View style={orgScreenStyles.requisiteContentContainer}>
-              <Text style={orgScreenStyles.requisiteContent}>
-                +972-3-522-67-36
-              </Text>
-            </View>
-          </View>
-
-          <View style={orgScreenStyles.separator} />
-
-          <View style={orgScreenStyles.requisiteContainer}>
-            <Text style={orgScreenStyles.requisiteTitle}>
-              Site
-            </Text>
-            <View style={orgScreenStyles.requisiteContentContainer}>
-              <Text style={orgScreenStyles.requisiteContent}>
-                lacroissanteri.shop
-              </Text>
-            </View>
-          </View>
-
-          <View style={orgScreenStyles.separator} />
-
-          <View style={orgScreenStyles.requisiteContainer}>
-            <Text style={orgScreenStyles.requisiteTitle}>
-              Address
-            </Text>
-            <View style={orgScreenStyles.requisiteContentContainer}>
-              <Text style={orgScreenStyles.requisiteContent}>
-                Tel-Aviv, Georgiuos st., 96
-              </Text>
-            </View>
-          </View>
-
-          <View style={orgScreenStyles.separator} />
-
-          <View style={orgScreenStyles.requisiteContainer}>
-            <Text style={orgScreenStyles.requisiteTitle}>
-              Hours
-            </Text>
-            <View style={orgScreenStyles.requisiteContentContainer}>
-              <Text style={orgScreenStyles.requisiteContent}>
-                10AM-10PM
-              </Text>
-            </View>
           </View>
         </View>
 
-        <View style={orgScreenStyles.buttonsContainer}>
-          <TouchableOpacity
-            style={orgScreenStyles.button}
-          >
-            <Text style={orgScreenStyles.buttonText}>Suggest an edit</Text>
-          </TouchableOpacity>
+        <View style={orgScreenStyles.separator} />
 
-          <TouchableOpacity
-            style={orgScreenStyles.button}
-          >
-            <Text style={orgScreenStyles.buttonText}>Build a route</Text>
-          </TouchableOpacity>
+        <View style={orgScreenStyles.requisiteContainer}>
+          <Text style={orgScreenStyles.requisiteTitle}>
+            Site
+          </Text>
+          <View style={orgScreenStyles.requisiteContentContainer}>
+            <Text style={orgScreenStyles.requisiteContent}>
+              lacroissanteri.shop
+            </Text>
+          </View>
         </View>
 
+        <View style={orgScreenStyles.separator} />
+
+        <View style={orgScreenStyles.requisiteContainer}>
+          <Text style={orgScreenStyles.requisiteTitle}>
+            Address
+          </Text>
+          <View style={orgScreenStyles.requisiteContentContainer}>
+            <Text style={orgScreenStyles.requisiteContent}>
+              281365, Israel, Tel-Aviv, Georgiuos st., 96
+            </Text>
+          </View>
+        </View>
+
+        <View style={orgScreenStyles.separator} />
+
+        <View style={orgScreenStyles.requisiteContainer}>
+          <Text style={orgScreenStyles.requisiteTitle}>
+            Hours
+          </Text>
+          <View style={orgScreenStyles.requisiteContentContainer}>
+            <Text style={orgScreenStyles.requisiteContent}>
+              Sunday: 10am-10pm{"\n"}
+              Monday: 10am-10pm{"\n"}
+              Tuesday: 10am-10pm{"\n"}
+              Wednesday: 10am-10pm{"\n"}
+              Thursday: 10am-10pm{"\n"}
+              Friday: 10am-10pm{"\n"}
+              Saturday: 10am-10pm{"\n"}
+            </Text>
+          </View>
+        </View>
+      </View>
+
+      <View style={orgScreenStyles.buttonsContainer}>
+        <TouchableOpacity
+          style={orgScreenStyles.button}
+        >
+          <Text style={orgScreenStyles.buttonText}>Suggest an edit</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={orgScreenStyles.button}
+        >
+          <Text style={orgScreenStyles.buttonText}>Build a route</Text>
+        </TouchableOpacity>
       </View>
     </ScreenWrapper>
   )
 };
 
 const orgScreenStyles = StyleSheet.create({
-  orgScreenContainer: {
-    paddingTop:20,
-    paddingLeft:30,
-    paddingRight:30,
-    paddingBottom:20,
+  orgContainer: {
     backgroundColor: 'white',
-  },
-  content: {
-    flex:1,
+    padding: 20,
+    borderRadius: 15,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity:  0.12,
+    shadowRadius: 20,
+    elevation: 5,
   },
   orgImage: {
     height: 200,
@@ -133,13 +138,21 @@ const orgScreenStyles = StyleSheet.create({
   },
   orgDescriptionContainer: {
     marginTop: 10,
-    marginBottom: 20,
   },
   orgDescription: {
     fontSize: 14,
   },
   requisitesContainer: {
     marginBottom: 20,
+    marginTop: 20,
+    backgroundColor: 'white',
+    padding: 20,
+    borderRadius: 15,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity:  0.12,
+    shadowRadius: 20,
+    elevation: 5,
   },
   separator: {
     height: 1,
@@ -161,31 +174,34 @@ const orgScreenStyles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   requisiteContent: {
-    color: '#777'
+    color: '#777',
+    textAlign: 'right',
   },
   buttonsContainer: {
-    paddingLeft:15,
-    paddingRight: 15,
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
   button: {
     marginBottom: 15,
-    width: width*0.35,
-    height: 40,
+    width: width*0.44,
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 20,
+    borderRadius: 15,
     // borderWidth: 2,
     // borderColor: '#0F4C81',
-    backgroundColor: '#ddd',
-
+    backgroundColor: '#0F4C81',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity:  0.5,
+    shadowRadius: 10,
+    height:70,
+    elevation: 5,
   },
   buttonText: {
-    color: '#444',
-    fontSize: 14,
-    fontWeight: '400',
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '500',
   },
 });
 

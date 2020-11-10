@@ -22,7 +22,9 @@ const Tab = createBottomTabNavigator();
 const App = () => {
   return (
     <>
-      <SafeAreaView style={{flex: 0, backgroundColor:'#0F4C81'}} />
+      <SafeAreaView style={{flex: 0, backgroundColor:'#0F4C81'}}>
+        <StatusBar barStyle={'light-content'} />
+      </SafeAreaView>
       <SafeAreaView style={{flex: 1, overflow: 'hidden',}}>
         <Header />
         <NavigationContainer>
