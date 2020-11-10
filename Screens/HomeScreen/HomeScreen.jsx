@@ -2,7 +2,7 @@ import React from 'react';
 
 import ScreenWrapper from '../Components/ScreenWrapper';
 
-import { StyleSheet, ScrollView, Text, View } from 'react-native';
+import { StyleSheet, Text } from 'react-native';
 import Slider from '../../components/Slider';
 
 // import { ORGS, ORGS_PER_SLIDER } from './constants';

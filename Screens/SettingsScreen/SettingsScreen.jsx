@@ -47,7 +47,7 @@ const SettingsScreen = () => {
         <Picker
           selectedValue={selectedLanguage}
           style={orgScreenStyles.languagePicker}
-          onValueChange={(itemValue, itemIndex) =>
+          onValueChange={(itemValue) =>
             setSelectedLanguage(itemValue)
           }
           mode="dialog"

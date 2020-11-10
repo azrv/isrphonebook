@@ -1,5 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import {
   StyleSheet,
   Text,
@@ -10,17 +9,9 @@ import {
   Animated,
   Easing
 } from 'react-native';
-import { SearchBar } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import { ServerContainer } from '@react-navigation/native';
-
-const { width, height } = Dimensions.get('window');
-
-var searchKeyword = '';
-const updateKeyword = (value) => {
-  searchKeyword=value;
-};
+const { height } = Dimensions.get('window');
 
 const transformValue = new Animated.Value(height);
 const opacityValue = new Animated.Value(0);
@@ -56,6 +47,9 @@ const onBlurAnimation = () => {
 };
 
 const Header = () => {
+  // eslint-disable-next-line no-unused-vars
+  const [keyword, setKeyword] = useState();
+
   return (
     <>
       <View style={headerStyles.headerContainer}>
@@ -67,7 +61,7 @@ const Header = () => {
             placeholderTextColor="#fff"
             returnKeyType={"search"}
             onSubmitEditing={onFocusAnimation}
-            onChangeText={(value) => updateKeyword(value)}
+            onChangeText={(value) => setKeyword(value)}
           />
         </View>
       </View>

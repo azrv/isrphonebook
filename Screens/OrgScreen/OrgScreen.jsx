@@ -13,8 +13,6 @@ import {
   Linking
 } from 'react-native';
 
-import Icon from 'react-native-vector-icons/MaterialIcons';
-
 const { width, height } = Dimensions.get("window");
 
 let transformValue = new Animated.Value(-100); // -width*0.5

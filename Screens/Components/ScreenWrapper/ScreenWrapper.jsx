@@ -1,7 +1,6 @@
 import React from 'react';
 
-import Header from '../../../components/Header'
-import { View, SafeAreaView, StatusBar, ScrollView,StyleSheet } from 'react-native';
+import { View, ScrollView,StyleSheet } from 'react-native';
 
 const ScreenWrapper = ({
   children,
