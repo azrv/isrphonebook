@@ -8,7 +8,7 @@ const { width, height } = Dimensions.get("window");
 
 const Slider = ({ items, last }) => {
   return (
-    <View style={[sliderStyles.sliderContainer, { marginBottom: last ? 25 : 0 }]}>
+    <View style={[sliderStyles.sliderContainer]}>
       <ScrollView
         horizontal
         snapToInterval={width * 0.65 + 15}
@@ -43,15 +43,13 @@ Slider.defaultProps = {
 
 const sliderStyles = StyleSheet.create({
   sliderContainer: {
-    marginTop: 15,
-    marginLeft: 30,
   },
   sliderCard: {
     marginRight: 15,
     width: width * 0.65,
   },
   lastSliderCard: {
-    marginRight: 30,
+    marginRight: 0,
     width: width * 0.65,
   },
   cardImage: {
