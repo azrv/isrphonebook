@@ -29,8 +29,8 @@ const SettingsScreen = () => {
           <View style={orgScreenStyles.settingContentContainer}>
             <Text style={orgScreenStyles.settingContent}>
               <Switch
-                trackColor={{ false: "#0F4C81", true: "#81b0ff" }}
-                thumbColor={isDarkModeEnabled ? "#fff" : "#f4f3f4"}
+                trackColor={{ false: "#fff", true: "#f1f1f1" }}
+                thumbColor={!isDarkModeEnabled ? "#fff" : "#777"}
                 ios_backgroundColor="#0F4C81"
                 onValueChange={toggleDarkMode}
                 value={isDarkModeEnabled}
@@ -50,7 +50,6 @@ const SettingsScreen = () => {
           onValueChange={(itemValue, itemIndex) =>
             setSelectedLanguage(itemValue)
           }
-          mode="dialog"
         >
           <Picker.Item label="English" value="en" />
           <Picker.Item label="עִברִית" value="he" />
