@@ -1,12 +1,9 @@
 import React from 'react';
-
 import ScreenWrapper from '../Components/ScreenWrapper';
-
 import {  Text } from 'react-native';
 import Slider from '../../components/Slider';
 import organisations from '../../organisations';
 import groupBy from '../../utils/groupBy';
-
 import styles from './styles'
 
 const HomeScreen = () => {

@@ -3,13 +3,10 @@ import ScreenWrapper from '../Components/ScreenWrapper';
 import {
   Text,
   View,
-  StyleSheet,
   Switch,
 } from 'react-native';
-
 import { Picker } from '@react-native-picker/picker';
-
-
+import styles from './styles';
 
 const SettingsScreen = () => {
 
@@ -19,34 +16,32 @@ const SettingsScreen = () => {
 
   return (
     <ScreenWrapper>
-      <Text style={orgScreenStyles.screenTitle}>Settings</Text>
+      <Text style={styles.screenTitle}>Settings</Text>
 
-      <View style={orgScreenStyles.settingsContainer}>
-        <View style={orgScreenStyles.settingContainer}>
-          <Text style={orgScreenStyles.settingTitle}>
+      <View style={styles.settingsContainer}>
+        <View style={styles.settingContainer}>
+          <Text style={styles.settingTitle}>
             Dark Mode
           </Text>
-          <View style={orgScreenStyles.settingContentContainer}>
-            <Text style={orgScreenStyles.settingContent}>
-              <Switch
-                trackColor={{ false: "#fff", true: "#f1f1f1" }}
-                thumbColor={!isDarkModeEnabled ? "#fff" : "#777"}
-                ios_backgroundColor="#0F4C81"
-                onValueChange={toggleDarkMode}
-                value={isDarkModeEnabled}
-              />
-            </Text>
+          <View style={styles.settingContentContainer}>
+            <Switch
+              trackColor={{ false: "#fff", true: "#f1f1f1" }}
+              thumbColor={!isDarkModeEnabled ? "#fff" : "#777"}
+              ios_backgroundColor="#0F4C81"
+              onValueChange={toggleDarkMode}
+              value={isDarkModeEnabled}
+            />
           </View>
         </View>
 
-        <View style={orgScreenStyles.separator} />
+        <View style={styles.separator} />
 
-        <Text style={orgScreenStyles.settingTitle}>
+        <Text style={styles.settingTitle}>
           Language
         </Text>
         <Picker
           selectedValue={selectedLanguage}
-          style={orgScreenStyles.languagePicker}
+          style={styles.languagePicker}
           onValueChange={(itemValue) =>
             setSelectedLanguage(itemValue)
           }
@@ -58,75 +53,17 @@ const SettingsScreen = () => {
 
       </View>
 
-      <Text style={[orgScreenStyles.screenTitle, {marginTop: 25,}]}>About</Text>
+      <Text style={[styles.screenTitle, {marginTop: 25,}]}>About</Text>
 
-      <View style={orgScreenStyles.aboutContainer}>
+      <View style={styles.aboutContainer}>
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco
           laboris nisi ut aliquip ex ea commodo consequat.
         </Text>
-
       </View>
     </ScreenWrapper>
 )};
-
-const orgScreenStyles = StyleSheet.create({
-  screenTitle: {
-    fontSize: 26,
-    fontWeight: '700',
-  },
-  separator: {
-    height: 1,
-    marginTop: 15,
-    marginBottom:15,
-    backgroundColor: '#ddd',
-  },
-  settingsContainer: {
-    marginTop:15,
-    backgroundColor: 'white',
-    padding: 20,
-    borderRadius: 15,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity:  0.12,
-    shadowRadius: 20,
-    elevation: 10,
-  },
-  settingContainer: {
-    flexDirection: 'row',
-  },
-  settingTitle: {
-    fontSize:16,
-    fontWeight: '500',
-    width: 120,
-    marginRight:20,
-  },
-  settingContentContainer: {
-    flex:1,
-    alignItems: 'flex-end',
-  },
-  settingContent: {
-    color: '#777',
-    textAlign: 'right',
-  },
-  languagePicker: {
-    flex: 1,
-    justifyContent: 'center',
-    height: 160,
-  },
-  aboutContainer: {
-    marginTop:15,
-    backgroundColor: 'white',
-    padding: 20,
-    borderRadius: 15,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity:  0.12,
-    shadowRadius: 20,
-    elevation: 10,
-  },
-});
 
 export default SettingsScreen;

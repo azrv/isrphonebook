@@ -5,6 +5,13 @@ export default [
     ],
     title: 'Israel Government',
     category: 'Government',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    phoneNumber: '+3-904-185-27-19',
+    siteURL: 'https://www.google.com/',
+    site: 'isrgovernment.com',
+    address: '887641, Spain, Madrid, St. Antonio st., 96, block B',
+    latitude: 37.78825,
+    longitude: -122.4324,
   },
   {
     images: [
@@ -12,6 +19,11 @@ export default [
     ],
     title: 'Office Building',
     category: 'Government',
+    description: '',
+    phoneNumber: '',
+    siteURL: '',
+    site: '',
+    address: '',
   },
   {
     images: [
@@ -19,6 +31,11 @@ export default [
     ],
     title: 'Cafeteria',
     category: 'Government',
+    description: '',
+    phoneNumber: '',
+    siteURL: '',
+    site: '',
+    address: '',
   },
   {
     images: [
@@ -33,6 +50,11 @@ export default [
     ],
     title: 'Hospital',
     category: 'Medicine',
+    description: '',
+    phoneNumber: '',
+    siteURL: '',
+    site: '',
+    address: '',
   },
   {
     images: [
@@ -40,6 +62,11 @@ export default [
     ],
     title: 'Cafeteria',
     category: 'Medicine',
+    description: '',
+    phoneNumber: '',
+    siteURL: '',
+    site: '',
+    address: '',
   },
   {
     images: [
@@ -47,6 +74,11 @@ export default [
     ],
     title: 'Office Building',
     category: 'Medicine',
+    description: '',
+    phoneNumber: '',
+    siteURL: '',
+    site: '',
+    address: '',
   },
   {
     images: [
@@ -54,6 +86,11 @@ export default [
     ],
     title: 'Israel Government',
     category: 'Medicine',
+    description: '',
+    phoneNumber: '',
+    siteURL: '',
+    site: '',
+    address: '',
   },
   {
     images: [
@@ -61,6 +98,11 @@ export default [
     ],
     title: 'National Park of Israel',
     category: 'Socialities',
+    description: '',
+    phoneNumber: '',
+    siteURL: '',
+    site: '',
+    address: '',
   },
   {
     images: [
@@ -68,6 +110,11 @@ export default [
     ],
     title: 'Israel Government',
     category: 'Socialities',
+    description: '',
+    phoneNumber: '',
+    siteURL: '',
+    site: '',
+    address: '',
   },
   {
     images: [
@@ -75,6 +122,11 @@ export default [
     ],
     title: 'Cafeteria',
     category: 'Socialities',
+    description: '',
+    phoneNumber: '',
+    siteURL: '',
+    site: '',
+    address: '',
   },
   {
     images: [
@@ -82,5 +134,10 @@ export default [
     ],
     title: 'Office Building',
     category: 'Socialities',
+    description: '',
+    phoneNumber: '',
+    siteURL: '',
+    site: '',
+    address: '',
   },
 ]
