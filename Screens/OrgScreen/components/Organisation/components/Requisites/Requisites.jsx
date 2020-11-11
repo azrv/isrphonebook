@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Text,
   View,
@@ -8,6 +8,19 @@ import {
 } from 'react-native';
 import styles from './styles';
 
+const HiddenView = ({
+  isHoursHidden,
+  children
+}) => {
+  if (isHoursHidden) {
+    return null;
+  }
+  return (
+    <View>
+      { children }
+    </View>
+  );
+};
 
 const Requisites = ({
   onAppearClipboard,
@@ -17,6 +30,12 @@ const Requisites = ({
   site,
   address
 }) => {
+
+  const [isHoursHidden, setHoursHidden] = useState(true);
+  const triggerHours = () => {
+    setHoursHidden(!isHoursHidden);
+  };
+
   return (
     <View style={styles.requisitesContainer}>
       <View style={styles.requisiteContainer}>
@@ -32,7 +51,7 @@ const Requisites = ({
             }
           }>
             <Text style={styles.requisiteContent}>
-              {phoneNumber}
+              { phoneNumber }
             </Text>
           </TouchableOpacity>
         </View>
@@ -51,7 +70,7 @@ const Requisites = ({
             }
           }>
             <Text style={styles.requisiteContent}>
-              {site}
+              { site }
             </Text>
           </TouchableOpacity>
         </View>
@@ -72,7 +91,7 @@ const Requisites = ({
             }
           }>
             <Text style={styles.requisiteContent}>
-              {address}
+              { address }
             </Text>
           </TouchableOpacity>
         </View>
@@ -85,15 +104,30 @@ const Requisites = ({
           Hours
         </Text>
         <View style={styles.requisiteContentContainer}>
-          <Text style={styles.requisiteContent}>
-            Sunday: 10am-10pm{"\n"}
-            Monday: 10am-10pm{"\n"}
-            Tuesday: 10am-10pm{"\n"}
-            Wednesday: 10am-10pm{"\n"}
-            Thursday: 10am-10pm{"\n"}
-            Friday: 10am-10pm{"\n"}
-            Saturday: 10am-10pm{"\n"}
-          </Text>
+
+            <View style={styles.requisiteHoursContentContainer}>
+              <Text style={[styles.requisiteHoursOpenContent, {color: 'green'}]}>
+                Open
+              </Text>
+              <TouchableOpacity
+                onPress={triggerHours}
+              >
+                <Text style={styles.requisiteHoursContent}>
+                  Sunday: 10am-10pm
+                </Text>
+              </TouchableOpacity>
+            </View>
+
+          <HiddenView isHoursHidden={isHoursHidden}>
+            <Text style={styles.requisiteHoursHiddenContent}>
+              Monday: 10am-10pm{"\n"}
+              Tuesday: 10am-10pm{"\n"}
+              Wednesday: 10am-10pm{"\n"}
+              Thursday: 10am-10pm{"\n"}
+              Friday: 10am-10pm{"\n"}
+              Saturday: 10am-10pm
+            </Text>
+          </HiddenView>
         </View>
       </View>
     </View>

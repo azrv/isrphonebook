@@ -29,9 +29,25 @@ export default StyleSheet.create({
   },
   requisiteContentContainer: {
     flex:1,
-    alignItems: 'flex-end',
+    alignItems: 'flex-end'
   },
   requisiteContent: {
+    color: '#777',
+    textAlign: 'right',
+  },
+  requisiteHoursContentContainer: {
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+  },
+  requisiteHoursOpenContent: {
+    marginRight: 15,
+    fontWeight: '600',
+  },
+  requisiteHoursContent: {
+    color: '#777',
+    textAlign: 'right',
+  },
+  requisiteHoursHiddenContent: {
     color: '#777',
     textAlign: 'right',
   },
