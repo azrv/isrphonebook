@@ -1,9 +1,7 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { TextInput, Animated, Easing, Dimensions, View } from 'react-native';
+import { TextInput, View } from 'react-native';
 import styles from './styles';
-
-const { height } = Dimensions.get('window');
 
 const Search = ({
   onChange,
