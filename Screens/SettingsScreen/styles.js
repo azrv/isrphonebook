@@ -1,4 +1,6 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+
+const { width, height } = Dimensions.get("window");
 
 export default StyleSheet.create({
   screenTitle: {
@@ -44,15 +46,30 @@ export default StyleSheet.create({
     justifyContent: 'center',
     height: 160,
   },
-  aboutContainer: {
-    marginTop:15,
-    backgroundColor: 'white',
-    padding: 20,
+  buttonsContainer: {
+    alignItems: 'center',
+    marginTop: 25,
+    flex: 1,
+    justifyContent: 'space-between',
+    height: 110,
+  },
+  button: {
+    alignItems: 'center',
+    justifyContent: 'center',
     borderRadius: 15,
+    backgroundColor: '#0F4C81',
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity:  0.12,
-    shadowRadius: 20,
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity:  0.4,
+    shadowRadius: 10,
     elevation: 10,
+    height: 50,
+    alignSelf: 'stretch',
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '500',
+    textAlign: 'center',
   },
 });

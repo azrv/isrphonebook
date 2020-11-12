@@ -4,6 +4,7 @@ import {
   Text,
   View,
   Switch,
+  TouchableOpacity
 } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import styles from './styles';
@@ -55,7 +56,7 @@ const SettingsScreen = () => {
 
       <Text style={[styles.screenTitle, {marginTop: 25,}]}>About</Text>
 
-      <View style={styles.aboutContainer}>
+      <View style={styles.settingsContainer}>
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -63,6 +64,20 @@ const SettingsScreen = () => {
           laboris nisi ut aliquip ex ea commodo consequat.
         </Text>
       </View>
+
+      <View style={styles.buttonsContainer}>
+          <TouchableOpacity
+            style={styles.button}
+          >
+            <Text style={styles.buttonText}>Contact us</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.button}
+          >
+            <Text style={styles.buttonText}>Report about inaccuracy</Text>
+          </TouchableOpacity>
+        </View>
     </ScreenWrapper>
 )};
 

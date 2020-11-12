@@ -19,12 +19,12 @@ const Organisation = ({
       />
 
       <Requisites
-      onAppearClipboard={onAppearClipboard}
-      onDisappearClipboard={onDisappearClipboard}
-      phoneNumber={org.phoneNumber}
-      siteURL={org.siteURL}
-      site={org.site}
-      address={org.address}
+        onAppearClipboard={onAppearClipboard}
+        onDisappearClipboard={onDisappearClipboard}
+        phoneNumber={org.phoneNumber}
+        siteURL={org.siteURL}
+        site={org.site}
+        address={org.address}
       />
 
       <Map
