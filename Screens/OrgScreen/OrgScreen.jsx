@@ -2,7 +2,6 @@ import React from 'react';
 import ScreenWrapper from '../Components/ScreenWrapper';
 import {
   Text,
-  View,
   Dimensions,
   Animated,
   Easing,
@@ -11,7 +10,7 @@ import styles from './styles';
 import Organisation from './components/Organisation';
 import organisations from '../../organisations';
 
-const { width, height } = Dimensions.get("window");
+const { height } = Dimensions.get("window");
 
 const transformValue = new Animated.Value(-100);
 
