@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './styles';
-import Description from './components/Description';
-import Requisites from './components/Requisites';
-import Map from './components/Map';
+import Description from './Description';
+import Requisites from './Requisites';
+import Map from './Map';
 
 const Organisation = ({
   onAppearClipboard,

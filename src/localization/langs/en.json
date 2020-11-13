@@ -1,0 +1,18 @@
+{
+  "hello" : "Hello",
+  "darkMode" : "Dark Mode",
+  "language" : "Language",
+  "settings" : "Settings",
+  "about" : "About",
+  "aboutContent" : "This is app desription. In this article we could try to tell the main idea of The PhoneBook.",
+  "contactUs" : "Contact us",
+  "inaccuracyReport" : "Report about inaccuracy",
+  "phoneNumber" : "Phone Number",
+  "site" : "Site",
+  "address" : "Address",
+  "hours" : "Hours",
+  "open" : "Open",
+  "close" : "Close",
+  "organisation": "Organisation",
+  "searchPlaceholder" : "Start your search",
+}

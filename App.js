@@ -1,6 +1,8 @@
 import React from 'react'
 import { StatusBar } from 'react-native';
 import Header from './components/Header'
+import * as Localization from 'expo-localization';
+import { Localize, init } from './src/localization/Localize';
 
 import {
   SafeAreaView
@@ -18,6 +20,7 @@ import SettingsScreen from './Screens/SettingsScreen';
 const Tab = createBottomTabNavigator();
 
 const App = () => {
+  init();
   return (
     <>
       <SafeAreaView style={{flex: 0, backgroundColor:'#0F4C81'}}>
@@ -30,12 +33,12 @@ const App = () => {
               screenOptions={({ route }) => ({
                 tabBarIcon: ({ focused, color, size }) => {
                   let iconName;
-
+                  Localize('hello')
                   if (route.name === 'PhoneBook') {
                     iconName = focused ? 'ios-albums' : 'ios-albums';
-                  } else if (route.name === 'Organisation') {
+                  } else if (route.name === Localize('organisation')) {
                     iconName = focused ? 'ios-list-box' : 'ios-list-box';
-                  } else if (route.name === 'Settings') {
+                  } else if (route.name === Localize('settings')) {
                     iconName = focused ? 'ios-settings' : 'ios-settings';
                   }
 
@@ -54,11 +57,11 @@ const App = () => {
                 component={HomeScreen}
               />
               <Tab.Screen
-                name="Organisation"
+                name={Localize('organisation')}
                 component={OrgScreen}
               />
               <Tab.Screen
-                name="Settings"
+                name={Localize('settings')}
                 component={SettingsScreen}
               />
             </Tab.Navigator>

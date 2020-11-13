@@ -4,9 +4,11 @@ import {  Text } from 'react-native';
 import Slider from '../../components/Slider';
 import organisations from '../../organisations';
 import groupBy from '../../utils/groupBy';
-import styles from './styles'
+import styles from './styles';
+import * as Localization from 'expo-localization';
 
 const HomeScreen = () => {
+
   const organisationsByCategories = groupBy(organisations, 'category');
 
   return (

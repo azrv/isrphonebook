@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import styles from './styles';
+import { Localize } from '../../src/localization/Localize';
 
 const SettingsScreen = () => {
 
@@ -17,12 +18,12 @@ const SettingsScreen = () => {
 
   return (
     <ScreenWrapper>
-      <Text style={styles.screenTitle}>Settings</Text>
+      <Text style={styles.screenTitle}>{Localize('settings')}</Text>
 
       <View style={styles.settingsContainer}>
         <View style={styles.settingContainer}>
           <Text style={styles.settingTitle}>
-            Dark Mode
+            {Localize('darkMode')}
           </Text>
           <View style={styles.settingContentContainer}>
             <Switch
@@ -38,7 +39,7 @@ const SettingsScreen = () => {
         <View style={styles.separator} />
 
         <Text style={styles.settingTitle}>
-          Language
+          {Localize('language')}
         </Text>
         <Picker
           selectedValue={selectedLanguage}
@@ -54,14 +55,11 @@ const SettingsScreen = () => {
 
       </View>
 
-      <Text style={[styles.screenTitle, {marginTop: 25,}]}>About</Text>
+      <Text style={[styles.screenTitle, {marginTop: 25,}]}>{Localize('about')}</Text>
 
       <View style={styles.settingsContainer}>
         <Text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat.
+          {Localize('aboutContent')}
         </Text>
       </View>
 
@@ -69,13 +67,13 @@ const SettingsScreen = () => {
           <TouchableOpacity
             style={styles.button}
           >
-            <Text style={styles.buttonText}>Contact us</Text>
+            <Text style={styles.buttonText}>{Localize('contactUs')}</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
             style={styles.button}
           >
-            <Text style={styles.buttonText}>Report about inaccuracy</Text>
+            <Text style={styles.buttonText}>{Localize('inaccuracyReport')}</Text>
           </TouchableOpacity>
         </View>
     </ScreenWrapper>

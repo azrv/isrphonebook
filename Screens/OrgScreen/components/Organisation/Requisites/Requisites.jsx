@@ -7,6 +7,7 @@ import {
   Linking
 } from 'react-native';
 import styles from './styles';
+import { Localize } from '../../../../../src/localization/Localize';
 
 const HiddenView = ({
   isHoursHidden,
@@ -40,7 +41,7 @@ const Requisites = ({
     <View style={styles.requisitesContainer}>
       <View style={styles.requisiteContainer}>
         <Text style={styles.requisiteTitle}>
-          Phone Number
+          {Localize('phoneNumber')}
         </Text>
         <View style={styles.requisiteContentContainer}>
           <TouchableOpacity
@@ -61,7 +62,7 @@ const Requisites = ({
 
       <View style={styles.requisiteContainer}>
         <Text style={styles.requisiteTitle}>
-          Site
+          {Localize('site')}
         </Text>
         <View style={styles.requisiteContentContainer}>
           <TouchableOpacity
@@ -80,7 +81,7 @@ const Requisites = ({
 
       <View style={styles.requisiteContainer}>
         <Text style={styles.requisiteTitle}>
-          Address
+          {Localize('address')}
         </Text>
         <View style={styles.requisiteContentContainer}>
           <TouchableOpacity
@@ -101,13 +102,13 @@ const Requisites = ({
 
       <View style={styles.requisiteContainer}>
         <Text style={styles.requisiteTitle}>
-          Hours
+          {Localize('hours')}
         </Text>
         <View style={styles.requisiteContentContainer}>
 
             <View style={styles.requisiteHoursContentContainer}>
               <Text style={[styles.requisiteHoursOpenContent, {color: 'green'}]}>
-                Open
+                {Localize('open')}
               </Text>
               <TouchableOpacity
                 onPress={triggerHours}

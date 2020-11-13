@@ -1,0 +1,18 @@
+{
+  "hello" : "Привет",
+  "darkMode" : "Темная тема",
+  "language" : "Язык",
+  "settings" : "Настройки",
+  "about" : "О нас",
+  "aboutContent" : "Это описание данного приложения. Здесь мы бы могли отобразить главную идею PhoneBook.",
+  "contactUs" : "Связаться с разработчиками",
+  "inaccuracyReport" : "Сообщить о неточности",
+  "phoneNumber" : "Телефон",
+  "site" : "Сайт",
+  "address" : "Адрес",
+  "hours" : "Часы работы",
+  "open" : "Открыто",
+  "close" : "Закрыто",
+  "organisation": "Организация",
+  "searchPlaceholder" : "Начните свой поиск",
+}
