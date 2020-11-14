@@ -19,7 +19,7 @@ export default BackButton = ({
     Animated.timing(opacityValue, {
       toValue: 0.4,
       duration: 500,
-      useNativeDriver: true,
+      useNativeDriver: false,
       easing: Easing.in(Easing.elastic(0.7))
     }).start();
   };
@@ -28,10 +28,11 @@ export default BackButton = ({
     Animated.timing(opacityValue, {
       toValue: 0,
       duration: 500,
-      useNativeDriver: true,
+      useNativeDriver: false,
       easing: Easing.in(Easing.elastic(0.7))
     }).start();
   };
+
 
   const AnimatedIcon = Animated.createAnimatedComponent(Icon);
 

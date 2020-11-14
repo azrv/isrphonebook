@@ -23,6 +23,7 @@ export default StyleSheet.create({
     fontWeight: '600',
     color: '#333',
     fontSize: 26,
+    textAlign: 'center',
   },
   orgCategoryContainer: {
     marginTop: 3,
