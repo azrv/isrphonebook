@@ -1,20 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styles from './styles';
 import Description from './Description';
 import Requisites from './Requisites';
 import Map from './Map';
+import { OrgContext } from '../OrgContext';
+import { translate } from '../../../utils/translateCategory';
 
 const Organisation = ({
   onAppearClipboard,
   onDisappearClipboard,
-  org
 }) => {
+  const org = useContext(OrgContext);
   return (
     <>
       <Description
         image={org.images[0]}
         title={org.title}
-        category={org.category}
+        category={translate(org.category)}
         description={org.description}
       />
 

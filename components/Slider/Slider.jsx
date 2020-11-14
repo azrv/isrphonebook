@@ -2,7 +2,7 @@ import React from 'react'
 import { Text, View, Image, Dimensions } from 'react-native'
 import { ScrollView } from "react-native-gesture-handler"
 import styles from './styles';
-
+import TranslatedTitle from './TranslatedTitle';
 const { width, height } = Dimensions.get("window");
 
 const Slider = ({
@@ -27,7 +27,9 @@ const Slider = ({
               uri: item.images[0]
             }}
           />
-          <Text style={styles.cardTitle}>{item.title} {/*(ID:{index})*/}</Text>
+          <Text style={styles.cardTitle}>
+            <TranslatedTitle item={item}/>
+          </Text>
         </View>
       ))}
       </ScrollView>

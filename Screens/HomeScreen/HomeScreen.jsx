@@ -5,6 +5,7 @@ import Slider from '../../components/Slider';
 import organisations from '../../organisations';
 import groupBy from '../../utils/groupBy';
 import styles from './styles';
+import { translate } from '../../utils/translateCategory';
 import * as Localization from 'expo-localization';
 
 const HomeScreen = () => {
@@ -18,7 +19,7 @@ const HomeScreen = () => {
           return (
             <React.Fragment key={id}>
               <Text style={styles.title}>
-                {category}
+                {translate(category)}
               </Text>
               <Slider items={organisationsByCategory} />
             </React.Fragment>

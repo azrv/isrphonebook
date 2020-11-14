@@ -36,11 +36,9 @@ export default StyleSheet.create({
     textAlign: 'right',
   },
   requisiteHoursContentContainer: {
-    flexDirection: 'row',
     alignItems: 'flex-end',
   },
   requisiteHoursOpenContent: {
-    marginRight: 15,
     fontWeight: '600',
   },
   requisiteHoursContent: {

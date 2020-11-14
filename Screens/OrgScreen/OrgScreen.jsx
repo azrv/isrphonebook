@@ -9,6 +9,8 @@ import {
 import styles from './styles';
 import Organisation from './Organisation';
 import organisations from '../../organisations';
+import { OrgProvider } from './OrgContext';
+
 
 const { height } = Dimensions.get("window");
 
@@ -33,20 +35,20 @@ const onDisappearClipboard = () => {
 }
 
 const OrgScreen = () => {
+  const organisationId = 0;
   return (
-    <>
+    <OrgProvider orgId={organisationId}>
       <ScreenWrapper>
         <Organisation
             onAppearClipboard={onAppearClipboard}
             onDisappearClipboard={onDisappearClipboard}
-            org={organisations[0]}
         />
       </ScreenWrapper>
 
       <Animated.View style={[styles.animatedView,{transform: [{ translateY: transformValue }]}]}>
         <Text style={{fontSize:14, color: '#fff'}}>Copied to the clipboard</Text>
       </Animated.View>
-    </>
+    </OrgProvider>
   )
 };
 
