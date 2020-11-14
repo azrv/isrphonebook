@@ -2,7 +2,8 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { TextInput, View } from 'react-native';
 import styles from './styles';
-import { Localize } from '../../src/localization/Localize';
+import { Localize } from '../../../src/localization/Localize';
+
 
 const Search = ({
   onChange,

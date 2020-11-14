@@ -1,0 +1,15 @@
+import React from 'react';
+import { Text } from 'react-native';
+
+import styles from './styles';
+
+const NotFound = ({
+}) => {
+  return (
+    <>
+      <Text>Not Found</Text>
+    </>
+  )
+};
+
+export default NotFound;

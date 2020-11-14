@@ -5,7 +5,6 @@ import {
   Easing,
   View,
 } from 'react-native';
-
 import styles from './styles';
 
 const { height } = Dimensions.get('window');
@@ -37,14 +36,14 @@ const Overlay = ({
   !hidden && showOverlay();
 
   return (
-    <Animated.View style={[ 
+    <Animated.View style={[
       styles.overlay,
       { transform: [{ translateY: goUp }] }
     ]}>
       <View style={styles.contentContainer}>
         {children}
       </View>
-    </Animated.View>    
+    </Animated.View>
   )
 };
 

@@ -1,35 +1,67 @@
 import React, { useState } from 'react';
-import { View } from 'react-native';
-import Search from '../Search';
-import NotFound from '../Search/NotFound';
+import { Animated, Easing, View, Text } from 'react-native';
+import Search from './Search';
+import NotFound from './Search/NotFound';
 import styles from './styles';
+import Overlay from './Overlay';
+import BackButton from './BackButton';
 
-import Overlay from '../Overlay';
+
 
 const Header = () => {
   // eslint-disable-next-line no-unused-vars
   const [keyword, setKeyword] = useState();
-  const [withOverlay, setWithOverlay] = useState();
+  const [withOverlay, setWithOverlay] = useState(false);
 
-  const showOvelay = () => { setWithOverlay(true) }
-  const hideOvelay = () => { setWithOverlay(false) }
+  const showOverlay = () => {
+    setWithOverlay(true);
+  }
+  const hideOverlay = () => {
+    setWithOverlay(false);
+  }
 
+  const [paddingValue, setPaddingValue] = useState(new Animated.Value(30));
+
+  const stretchInSearch = () => {
+    Animated.timing(paddingValue, {
+      toValue: 50,
+      duration: 500,
+      useNativeDriver: false,
+      easing: Easing.in(Easing.elastic(0.7))
+    }).start();
+  };
+
+  const stretchOutSearch = () => {
+    Animated.timing(paddingValue, {
+      toValue: 30,
+      duration: 500,
+      useNativeDriver: false,
+      easing: Easing.in(Easing.elastic(0.7))
+    }).start();
+  };
+
+  withOverlay && stretchInSearch();
+  !withOverlay && stretchOutSearch();
   return (
     <>
-      <View style={styles.headerContainer}>
-        <Search 
-          onChange={setKeyword} 
-          onSubmitEditing={showOvelay}
+      <Animated.View style={[styles.headerContainer, {paddingLeft: paddingValue}]}>
+        <Search
+          onChange={setKeyword}
+          onSubmitEditing={showOverlay}
         />
-      </View>
 
+      </Animated.View>
+      <BackButton
+        hidden={withOverlay}
+        onPressBack={hideOverlay}
+      />
       <Overlay
         hidden={!withOverlay}
       >
-        <NotFound
-          onPressBack={hideOvelay}
-        />
+        <NotFound />
       </Overlay>
+
+
     </>
   )
 };
