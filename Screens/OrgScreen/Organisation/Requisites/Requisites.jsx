@@ -7,7 +7,7 @@ import {
   Linking
 } from 'react-native';
 import styles from './styles';
-import { Localize } from '../../../../../src/localization/Localize';
+import { Localize } from '../../../../src/localization/Localize';
 
 const HiddenView = ({
   isHoursHidden,

@@ -7,7 +7,7 @@ import {
   Easing,
 } from 'react-native';
 import styles from './styles';
-import Organisation from './components/Organisation';
+import Organisation from './Organisation';
 import organisations from '../../organisations';
 
 const { height } = Dimensions.get("window");
