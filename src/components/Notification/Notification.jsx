@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import {
   Animated,
   Easing,
@@ -8,10 +8,10 @@ import styles from './styles';
 
 export const NotificationContext = React.createContext();
 
-export default NotificationProvider = ({
+const NotificationProvider = ({
   children
 }) => {
-  const notificationTransformValue = new Animated.Value(0);
+  const notificationTransformValue = useRef(new Animated.Value(0)).current;
 
   const onAppearNotification = () => {
     Animated.timing(notificationTransformValue, {
@@ -20,7 +20,6 @@ export default NotificationProvider = ({
       useNativeDriver: false,
       easing: Easing.in(Easing.elastic(0.7))
     }).start();
-    console.log('Notification appears');
   };
 
   const onDisappearNotification = () => {
@@ -30,17 +29,14 @@ export default NotificationProvider = ({
       useNativeDriver: false,
       easing: Easing.in(Easing.elastic(0.7))
     }).start();
-    console.log('Notification disappears');
   };
 
   const [notificationText, setNotificationText] = useState('Empty Notification');
   const triggerNotification = (text) => {
     setNotificationText(text);
-    console.log('Triggered notification: ' + text);
     onAppearNotification();
     setTimeout(() => {  onDisappearNotification(); }, 1200);
   };
-  console.log('About to render Notification View');
   return (
     <NotificationContext.Provider value={triggerNotification}>
       {children}
@@ -57,3 +53,5 @@ export default NotificationProvider = ({
     </NotificationContext.Provider>
   )
 }
+
+export default NotificationProvider;
