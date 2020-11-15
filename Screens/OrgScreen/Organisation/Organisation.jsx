@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import styles from './styles';
 import Description from './Description';
 import Requisites from './Requisites';
 import Map from './Map';

@@ -3,8 +3,7 @@ import { Text } from 'react-native';
 
 import styles from './styles';
 
-const NotFound = ({
-}) => {
+const NotFound = () => {
   return (
     <>
       <Text>Not Found</Text>

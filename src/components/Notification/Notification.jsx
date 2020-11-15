@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import {
   Animated,
-  View,
   Easing,
-  Text,
-  Dimensions
+  Text
 } from 'react-native';
 import styles from './styles';
 
@@ -13,14 +11,6 @@ export const NotificationContext = React.createContext();
 export default NotificationProvider = ({
   children
 }) => {
-  const [notificationText, setNotificationText] = useState('Empty Notification');
-  const triggerNotification = (text) => {
-    setNotificationText(text);
-    console.log('Triggered notification: ' + text);
-    onAppearNotification();
-    setTimeout(() => {  onDisappearNotification(); }, 1200);
-  };
-
   const notificationTransformValue = new Animated.Value(0);
 
   const onAppearNotification = () => {
@@ -30,6 +20,7 @@ export default NotificationProvider = ({
       useNativeDriver: false,
       easing: Easing.in(Easing.elastic(0.7))
     }).start();
+    console.log('Notification appears');
   };
 
   const onDisappearNotification = () => {
@@ -39,8 +30,17 @@ export default NotificationProvider = ({
       useNativeDriver: false,
       easing: Easing.in(Easing.elastic(0.7))
     }).start();
+    console.log('Notification disappears');
   };
 
+  const [notificationText, setNotificationText] = useState('Empty Notification');
+  const triggerNotification = (text) => {
+    setNotificationText(text);
+    console.log('Triggered notification: ' + text);
+    onAppearNotification();
+    setTimeout(() => {  onDisappearNotification(); }, 1200);
+  };
+  console.log('About to render Notification View');
   return (
     <NotificationContext.Provider value={triggerNotification}>
       {children}
@@ -48,13 +48,12 @@ export default NotificationProvider = ({
         styles.animatedView,
         {
           transform: [{
-            translateY: notificationTransformValue,
+            translateY: notificationTransformValue
           }]
         }
       ]}>
         <Text style={styles.animatedViewText}>{notificationText}</Text>
       </Animated.View>
-
     </NotificationContext.Provider>
   )
 }

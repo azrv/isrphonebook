@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as Localization from 'expo-localization';
 import orgs from '../../../organisations';
 
@@ -52,7 +52,7 @@ export const OrgProvider = ({
       latitude: orgs[orgId].latitude,
       longitude: orgs[orgId].longitude,
     }
-  };
+  }
 
   return (
     <OrgContext.Provider value={org}>

@@ -6,7 +6,6 @@ import {
   Switch,
   TouchableOpacity
 } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
 import styles from './styles';
 import { Localize } from '../../src/localization/Localize';
 
@@ -31,17 +30,6 @@ const SettingsScreen = () => {
               onValueChange={toggleDarkMode}
               value={isDarkModeEnabled}
             />
-          </View>
-        </View>
-
-        <View style={styles.separator} />
-        <View style={styles.settingContainer}>
-          <Text style={styles.settingTitle}>
-            {Localize('language')}
-          </Text>
-
-          <View style={styles.settingContentContainer}>
-            <Text style={{textAlign: 'right'}}>Choose language in your device's settings</Text>
           </View>
         </View>
       </View>

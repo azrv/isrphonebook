@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Animated, Easing, View, Text } from 'react-native';
+import { Animated, Easing } from 'react-native';
 import Search from './Search';
 import NotFound from './Search/NotFound';
 import styles from './styles';

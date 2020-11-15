@@ -1,7 +1,6 @@
 import React from 'react'
 import { StatusBar } from 'react-native';
 import Header from './components/Header'
-import * as Localization from 'expo-localization';
 import { Localize, init } from './src/localization/Localize';
 import NotificationProvider from './src/components/Notification';
 import {
@@ -42,8 +41,6 @@ const App = () => {
                     } else if (route.name === Localize('settings')) {
                       iconName = focused ? 'ios-settings' : 'ios-settings';
                     }
-
-                    // You can return any component that you like here!
                     return <Ionicons name={iconName} size={size} color={color} />;
                   },
                 })}

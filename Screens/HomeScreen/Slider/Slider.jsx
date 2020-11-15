@@ -3,7 +3,7 @@ import { Text, View, Image, Dimensions } from 'react-native'
 import { ScrollView } from "react-native-gesture-handler"
 import styles from './styles';
 import TranslatedTitle from './TranslatedTitle';
-const { width, height } = Dimensions.get("window");
+const { width } = Dimensions.get("window");
 
 const Slider = ({
   items

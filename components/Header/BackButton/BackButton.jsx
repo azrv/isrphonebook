@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {
-  Text,
   View,
   Animated,
   Easing,
@@ -14,7 +13,6 @@ export default BackButton = ({
   onPressBack
 }) => {
   const [opacityValue, setOpacityValue] = useState(new Animated.Value(0));
-
   const onBackButtonAppear = () => {
     Animated.timing(opacityValue, {
       toValue: 0.4,

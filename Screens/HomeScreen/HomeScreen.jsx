@@ -1,12 +1,12 @@
 import React from 'react';
 import ScreenWrapper from '../Components/ScreenWrapper';
 import {  Text } from 'react-native';
-import Slider from '../../components/Slider';
+import Slider from './Slider';
 import organisations from '../../organisations';
 import groupBy from '../../utils/groupBy';
 import styles from './styles';
 import { translate } from '../../utils/translateCategory';
-import * as Localization from 'expo-localization';
+import HomeHeader from './HomeHeader';
 
 const HomeScreen = () => {
 
@@ -14,6 +14,7 @@ const HomeScreen = () => {
 
   return (
     <ScreenWrapper>
+      {/*<HomeHeader />*/}
       {
         Object.entries(organisationsByCategories).map(([category, organisationsByCategory], id) => {
           return (
