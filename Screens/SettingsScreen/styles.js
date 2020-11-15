@@ -26,6 +26,7 @@ export default StyleSheet.create({
   },
   settingContainer: {
     flexDirection: 'row',
+    alignItems: 'center',
   },
   settingTitle: {
     fontSize:16,

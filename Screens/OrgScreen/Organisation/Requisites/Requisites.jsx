@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import {
   Text,
   View,
@@ -8,30 +8,17 @@ import {
 } from 'react-native';
 import styles from './styles';
 import { Localize } from '../../../../src/localization/Localize';
+import { NotificationContext } from '../../../../src/components/Notification';
 
-const HiddenView = ({
-  isHoursHidden,
-  children
-}) => {
-  if (isHoursHidden) {
-    return null;
-  }
-  return (
-    <View>
-      { children }
-    </View>
-  );
-};
+
 
 const Requisites = ({
-  onAppearClipboard,
-  onDisappearClipboard,
   phoneNumber,
   siteURL,
   site,
   address
 }) => {
-
+  const triggerNotification = useContext(NotificationContext);
   const [isHoursHidden, setHoursHidden] = useState(true);
   const triggerHours = () => {
     setHoursHidden(!isHoursHidden);
@@ -47,8 +34,7 @@ const Requisites = ({
           <TouchableOpacity
             onPress={() => {
               Clipboard.setString(phoneNumber);
-              onAppearClipboard();
-              setTimeout(() => {  onDisappearClipboard(); }, 1200);
+              triggerNotification('Copied to the clipboard');
             }
           }>
             <Text style={styles.requisiteContent}>
@@ -87,8 +73,7 @@ const Requisites = ({
           <TouchableOpacity
             onPress={() => {
               Clipboard.setString(address);
-              onAppearClipboard();
-              setTimeout(() => {  onDisappearClipboard(); }, 1200);
+              triggerNotification('Copied to the clipboard');
             }
           }>
             <Text style={styles.requisiteContent}>
@@ -133,6 +118,20 @@ const Requisites = ({
       </View>
     </View>
   )
+};
+
+const HiddenView = ({
+  isHoursHidden,
+  children
+}) => {
+  if (isHoursHidden) {
+    return null;
+  }
+  return (
+    <View>
+      { children }
+    </View>
+  );
 };
 
 export default Requisites;

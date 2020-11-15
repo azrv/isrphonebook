@@ -11,10 +11,8 @@ import styles from './styles';
 import { Localize } from '../../src/localization/Localize';
 
 const SettingsScreen = () => {
-
-  const [selectedLanguage, setSelectedLanguage] = useState("en");
   const [isDarkModeEnabled, setIsDarkModeEnabled] = useState(false);
-  const toggleDarkMode = () => setIsDarkModeEnabled(previousState => !previousState);
+  const toggleDarkMode = () => { setIsDarkModeEnabled(!isDarkModeEnabled); }
 
   return (
     <ScreenWrapper>
@@ -37,22 +35,15 @@ const SettingsScreen = () => {
         </View>
 
         <View style={styles.separator} />
+        <View style={styles.settingContainer}>
+          <Text style={styles.settingTitle}>
+            {Localize('language')}
+          </Text>
 
-        <Text style={styles.settingTitle}>
-          {Localize('language')}
-        </Text>
-        <Picker
-          selectedValue={selectedLanguage}
-          style={styles.languagePicker}
-          onValueChange={(itemValue) =>
-            setSelectedLanguage(itemValue)
-          }
-        >
-          <Picker.Item label="English" value="en" />
-          <Picker.Item label="עִברִית" value="he" />
-          <Picker.Item label="Русский" value="ru" />
-        </Picker>
-
+          <View style={styles.settingContentContainer}>
+            <Text style={{textAlign: 'right'}}>Choose language in your device's settings</Text>
+          </View>
+        </View>
       </View>
 
       <Text style={[styles.screenTitle, {marginTop: 25,}]}>{Localize('about')}</Text>
