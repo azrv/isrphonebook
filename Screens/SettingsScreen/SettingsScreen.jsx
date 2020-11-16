@@ -15,7 +15,9 @@ const SettingsScreen = () => {
 
   return (
     <ScreenWrapper>
-      <Text style={styles.screenTitle}>{Localize('settings')}</Text>
+      <View style={styles.screenTitleContainer}>
+        <Text style={styles.screenTitle}>{Localize('settings')}</Text>
+      </View>
 
       <View style={styles.settingsContainer}>
         <View style={styles.settingContainer}>
@@ -33,11 +35,11 @@ const SettingsScreen = () => {
           </View>
         </View>
       </View>
-
-      <Text style={[styles.screenTitle, {marginTop: 25,}]}>{Localize('about')}</Text>
-
+      <View style={styles.screenTitleContainer}>
+        <Text style={[styles.screenTitle, {marginTop: 25,}]}>{Localize('about')}</Text>
+      </View>
       <View style={styles.settingsContainer}>
-        <Text>
+        <Text style={styles.aboutText}>
           {Localize('aboutContent')}
         </Text>
       </View>

@@ -6,12 +6,9 @@ import NotificationProvider from './src/components/Notification';
 import {
   SafeAreaView
 } from 'react-native-safe-area-context';
-
 import { Ionicons } from '@expo/vector-icons';
-
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
 import HomeScreen from './Screens/HomeScreen';
 import OrgScreen from './Screens/OrgScreen';
 import SettingsScreen from './Screens/SettingsScreen';

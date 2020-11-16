@@ -40,4 +40,8 @@ export default StyleSheet.create({
   orgDescription: {
     fontSize: 14,
   },
+  heOrgDescription: {
+    fontSize: 14,
+    textAlign: 'right',
+  },
 });

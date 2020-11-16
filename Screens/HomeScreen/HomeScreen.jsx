@@ -1,12 +1,11 @@
 import React from 'react';
 import ScreenWrapper from '../Components/ScreenWrapper';
-import {  Text } from 'react-native';
+import { Text, View } from 'react-native';
 import Slider from './Slider';
 import organisations from '../../organisations';
 import groupBy from '../../utils/groupBy';
 import styles from './styles';
 import { translate } from '../../utils/translateCategory';
-import HomeHeader from './HomeHeader';
 
 const HomeScreen = () => {
 
@@ -14,14 +13,15 @@ const HomeScreen = () => {
 
   return (
     <ScreenWrapper>
-      {/*<HomeHeader />*/}
       {
         Object.entries(organisationsByCategories).map(([category, organisationsByCategory], id) => {
           return (
             <React.Fragment key={id}>
-              <Text style={styles.title}>
-                {translate(category)}
-              </Text>
+              <View style={styles.titleContainer}>
+                <Text style={styles.title}>
+                  {translate(category)}
+                </Text>
+              </View>
               <Slider items={organisationsByCategory} />
             </React.Fragment>
           )

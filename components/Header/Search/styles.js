@@ -1,4 +1,7 @@
 import { StyleSheet } from 'react-native';
+import * as Localization from 'expo-localization';
+
+const langTag = Localization.locale.split('-')[0];
 
 export default StyleSheet.create({
   searchContainer: {
@@ -20,6 +23,7 @@ export default StyleSheet.create({
     fontWeight: '600',
     color: '#fff',
     height: 60,
+    textAlign: (langTag === 'he') ? 'right' : 'left',
   },
   searchIcon: {
     justifyContent: 'center',

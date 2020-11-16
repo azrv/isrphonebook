@@ -27,9 +27,11 @@ const Slider = ({
               uri: item.images[0]
             }}
           />
-          <Text style={styles.cardTitle}>
-            <TranslatedTitle item={item}/>
-          </Text>
+          <View style={styles.cardTitleContainer}>
+            <Text style={styles.cardTitle}>
+              <TranslatedTitle item={item}/>
+            </Text>
+          </View>
         </View>
       ))}
       </ScrollView>

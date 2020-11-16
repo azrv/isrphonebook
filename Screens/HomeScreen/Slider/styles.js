@@ -1,4 +1,7 @@
 import { StyleSheet, Dimensions } from 'react-native';
+import * as Localization from 'expo-localization';
+
+const langTag = Localization.locale.split('-')[0];
 
 const { width, height } = Dimensions.get("window");
 
@@ -16,6 +19,9 @@ export default StyleSheet.create({
   cardImage: {
     height: height * 0.24,
     borderRadius: 7,
+  },
+  cardTitleContainer: {
+    alignItems: (langTag === 'he') ? 'flex-start' : 'flex-end',
   },
   cardTitle: {
     fontWeight: '500',

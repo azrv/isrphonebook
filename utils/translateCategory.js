@@ -6,7 +6,7 @@ export const translations = {
   [CATEGORY_GOVERNMENT]: {
     en: 'Government',
     ru: 'Правительство',
-    he: 'HEGovernment',
+    he: 'מֶמְשָׁלָה',
   }
 };
 

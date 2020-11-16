@@ -1,6 +1,12 @@
 import { StyleSheet } from 'react-native';
+import * as Localization from 'expo-localization';
+
+const langTag = Localization.locale.split('-')[0];
 
 export default StyleSheet.create({
+  screenTitleContainer: {
+    alignItems: (langTag === 'he') ? 'flex-start' : 'flex-end',
+  },
   screenTitle: {
     fontSize: 26,
     fontWeight: '700',
@@ -30,7 +36,9 @@ export default StyleSheet.create({
     fontSize:16,
     fontWeight: '500',
     width: 120,
-    marginRight:20,
+    marginRight: (langTag === 'he') ? 20 : 0,
+    marginLeft: (langTag === 'he') ? 0 : 20,
+    textAlign: (langTag === 'he') ? 'left' : 'right',
   },
   settingContentContainer: {
     flex:1,
@@ -70,5 +78,8 @@ export default StyleSheet.create({
     fontSize: 16,
     fontWeight: '500',
     textAlign: 'center',
+  },
+  aboutText: {
+    textAlign: (langTag === 'he') ? 'left' : 'right',
   },
 });

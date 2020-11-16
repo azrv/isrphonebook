@@ -10,8 +10,6 @@ import styles from './styles';
 import { Localize } from '../../../../src/localization/Localize';
 import { NotificationContext } from '../../../../src/components/Notification';
 
-
-
 const Requisites = ({
   phoneNumber,
   siteURL,

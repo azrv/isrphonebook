@@ -7,7 +7,7 @@ import Overlay from './Overlay';
 import BackButton from './BackButton';
 
 
-
+const paddingValue = new Animated.Value(30);
 const Header = () => {
   // eslint-disable-next-line no-unused-vars
   const [keyword, setKeyword] = useState();
@@ -20,7 +20,7 @@ const Header = () => {
     setWithOverlay(false);
   }
 
-  const [paddingValue, setPaddingValue] = useState(new Animated.Value(30));
+
 
   const stretchInSearch = () => {
     Animated.timing(paddingValue, {
