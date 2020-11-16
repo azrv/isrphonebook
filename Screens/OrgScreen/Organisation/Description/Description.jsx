@@ -5,9 +5,6 @@ import {
   Image,
 } from 'react-native';
 import styles from './styles';
-import * as Localization from 'expo-localization';
-
-const langTag = Localization.locale.split('-')[0];
 
 const Description = ({
   image,
@@ -32,7 +29,7 @@ const Description = ({
       </View>
 
       <View style={styles.orgDescriptionContainer}>
-        <Text style={langTag === 'he'? styles.heOrgDescription : styles.orgDescription }>
+        <Text style={styles.orgDescription}>
           {description}
         </Text>
       </View>

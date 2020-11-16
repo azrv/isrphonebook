@@ -1,11 +1,8 @@
 import { StyleSheet } from 'react-native';
-import * as Localization from 'expo-localization';
-
-const langTag = Localization.locale.split('-')[0];
 
 export default StyleSheet.create({
   titleContainer: {
-    alignItems: (langTag === 'he') ? 'flex-start' : 'flex-end',
+    alignItems: 'flex-start',
   },
   title: {
     marginBottom: 10,
