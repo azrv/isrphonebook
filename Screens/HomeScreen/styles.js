@@ -5,6 +5,7 @@ export default StyleSheet.create({
     alignItems: 'flex-start',
   },
   title: {
+    marginTop: 20,
     marginBottom: 10,
     fontSize: 26,
     fontWeight: '700',
