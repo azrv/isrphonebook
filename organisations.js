@@ -5,6 +5,7 @@ import {
 
 export default [
   {
+    id: 0,
     images: [
       'https://im.kommersant.ru/Issues.photo/CORP/2019/12/12/KMO_163712_00083_1_t241_060345.jpg'
     ],
@@ -31,6 +32,7 @@ export default [
     longitude: -122.4324,
   },
   {
+    id: 1,
     images: [
       'https://im.kommersant.ru/Issues.photo/CORP/2019/12/12/KMO_163712_00083_1_t241_060345.jpg'
     ],
@@ -57,6 +59,7 @@ export default [
     longitude: -122.4324,
   },
   {
+    id: 2,
     images: [
       'https://im.kommersant.ru/Issues.photo/CORP/2019/12/12/KMO_163712_00083_1_t241_060345.jpg'
     ],

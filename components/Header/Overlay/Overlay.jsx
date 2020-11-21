@@ -32,8 +32,7 @@ const Overlay = ({
   children,
   hidden,
 }) => {
-  hidden && hideOverlay();
-  !hidden && showOverlay();
+  hidden ? hideOverlay() : showOverlay();
 
   return (
     <Animated.View style={[

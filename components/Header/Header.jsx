@@ -5,23 +5,25 @@ import NotFound from './Search/NotFound';
 import styles from './styles';
 import Overlay from './Overlay';
 import BackButton from './BackButton';
-
+import SearchResult from './Search/SearchResult'
+import { buildItems } from './utils';
+import UseOrganisationsSearch from '../../src/hooks/UseOrganisationsSearch';
 
 const paddingValue = new Animated.Value(30);
+
 const Header = () => {
-  // eslint-disable-next-line no-unused-vars
-  const [keyword, setKeyword] = useState();
   const [withOverlay, setWithOverlay] = useState(false);
+  const [foundItems, setFoundItems] = useState([]);
 
   const showOverlay = () => {
     setWithOverlay(true);
   }
+
   const hideOverlay = () => {
     setWithOverlay(false);
   }
 
-
-
+  // TODO take this into Search component
   const stretchInSearch = () => {
     Animated.timing(paddingValue, {
       toValue: 50,
@@ -40,14 +42,22 @@ const Header = () => {
     }).start();
   };
 
-  withOverlay && stretchInSearch();
-  !withOverlay && stretchOutSearch();
+  const search = UseOrganisationsSearch()
+
+  const onKeywordChange = (text) => {
+    const suggestions = search.searchBy(text);
+
+    setFoundItems(buildItems(suggestions, text));
+  }
+
+  withOverlay ? stretchInSearch() : stretchOutSearch();
+
   return (
     <>
       <Animated.View style={[styles.headerContainer, {paddingLeft: paddingValue}]}>
         <Search
-          onChange={setKeyword}
-          onSubmitEditing={showOverlay}
+          onChange={onKeywordChange}
+          onKeyPress={showOverlay}
         />
 
       </Animated.View>
@@ -58,10 +68,10 @@ const Header = () => {
       <Overlay
         hidden={!withOverlay}
       >
-        <NotFound />
+        {
+          foundItems.length ? <SearchResult items={foundItems} /> : <NotFound />
+        }
       </Overlay>
-
-
     </>
   )
 };

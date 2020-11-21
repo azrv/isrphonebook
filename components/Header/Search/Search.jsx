@@ -7,7 +7,7 @@ import { Localize } from '../../../src/localization/Localize';
 
 const Search = ({
   onChange,
-  onSubmitEditing,
+  onKeyPress,
 }) => {
   return (
     <View style={styles.searchContainer}>
@@ -17,7 +17,7 @@ const Search = ({
         placeholder={Localize('searchPlaceholder')}
         placeholderTextColor="#fff"
         returnKeyType={"search"}
-        onSubmitEditing={onSubmitEditing}
+        onKeyPress={onKeyPress}
         onChangeText={(value) => onChange(value)}
       />
     </View>
