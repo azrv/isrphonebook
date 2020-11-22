@@ -10,9 +10,9 @@ export default [
       'https://im.kommersant.ru/Issues.photo/CORP/2019/12/12/KMO_163712_00083_1_t241_060345.jpg'
     ],
     title: {
-      en: 'Israel Government',
-      ru: 'Правительство Израиля',
-      he: 'ממשלת ישראל',
+      en: 'Israel Government1',
+      ru: 'Правительство Израиля1',
+      he: '1ממשלת ישראל',
     },
     category: CATEGORY_GOVERNMENT,
     description: {
