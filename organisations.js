@@ -1,8 +1,3 @@
-import {
-  CATEGORY_GOVERNMENT,
-  CATEGORY_GOVERNMENT2
-} from './utils/translateCategory';
-
 export default [
   {
     id: 0,
@@ -14,7 +9,11 @@ export default [
       ru: 'Правительство Израиля1',
       he: '1ממשלת ישראל',
     },
-    category: CATEGORY_GOVERNMENT,
+    category: {
+      en: 'Government1',
+      ru: 'Правительство1',
+      he: '1מֶמְשָׁלָה',
+    },
     description: {
       en: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       ru: 'Израиль – библейская Земля обетованная – сегодня представляет собой современное, процветающее, полное жизни государство. В течение долгих столетий он был ареной самых удивительных событий в истории человечества. И наконец эта земля была возвращена народу Израиля, вернувшемуся из многовекового рассеяния.',
@@ -41,7 +40,11 @@ export default [
       ru: 'Правительство Израиля',
       he: 'ממשלת ישראל',
     },
-    category: CATEGORY_GOVERNMENT2,
+    category: {
+      en: 'Government',
+      ru: 'Правительство',
+      he: 'מֶמְשָׁלָה',
+    },
     description: {
       en: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       ru: 'Израиль – библейская Земля обетованная – сегодня представляет собой современное, процветающее, полное жизни государство. В течение долгих столетий он был ареной самых удивительных событий в истории человечества. И наконец эта земля была возвращена народу Израиля, вернувшемуся из многовекового рассеяния.',
@@ -68,7 +71,11 @@ export default [
       ru: 'Правительство Израиля',
       he: 'ממשלת ישראל',
     },
-    category: CATEGORY_GOVERNMENT,
+    category: {
+      en: 'Government',
+      ru: 'Правительство',
+      he: 'מֶמְשָׁלָה',
+    },
     description: {
       en: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       ru: 'Израиль – библейская Земля обетованная – сегодня представляет собой современное, процветающее, полное жизни государство. В течение долгих столетий он был ареной самых удивительных событий в истории человечества. И наконец эта земля была возвращена народу Израиля, вернувшемуся из многовекового рассеяния.',

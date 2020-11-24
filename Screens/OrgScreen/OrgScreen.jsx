@@ -1,7 +1,7 @@
 import React from 'react';
 import ScreenWrapper from '../Components/ScreenWrapper';
 import Organisation from './Organisation';
-import { OrgProvider } from './OrgContext';
+import { OrgProvider } from '../Components/OrgContext';
 
 const OrgScreen = () => {
   const organisationId = 0;

@@ -2,8 +2,7 @@ import React, { useContext } from 'react';
 import Description from './Description';
 import Requisites from './Requisites';
 import Map from './Map';
-import { OrgContext } from '../OrgContext';
-import { translate } from '../../../utils/translateCategory';
+import { OrgContext } from '../../Components/OrgContext';
 
 const Organisation = ({
   onAppearClipboard,
@@ -15,7 +14,7 @@ const Organisation = ({
       <Description
         image={org.images[0]}
         title={org.title}
-        category={translate(org.category)}
+        category={org.category}
         description={org.description}
       />
 
