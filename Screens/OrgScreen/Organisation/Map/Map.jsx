@@ -17,8 +17,8 @@ const Map = ({
         initialRegion={{
           latitude: latitude,
           longitude: longitude,
-          latitudeDelta: 0.0922,
-          longitudeDelta: 0.0421,
+          latitudeDelta: 0.009,
+          longitudeDelta: 0.009,
         }}
         style={styles.mapView}
         //scrollEnabled={false}
