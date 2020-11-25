@@ -28,11 +28,11 @@ const MainOrgsListItem = () => {
         <Text style={styles.itemContentCategory}>{org.category}</Text>
         <View style={styles.itemContentStatusContainer}>
           <Text style={[styles.itemContentStatus, { color: 'green' }]}>{Localize('open')}</Text>
+          <Text style={styles.itemContentStatusInfo}>till 11pm</Text>
         </View>
       </View>
       <View style={styles.iconContainer}>
-      <Icon style={styles.icon} name={langTag === 'he' ? "keyboard-arrow-left" : "keyboard-arrow-right"}/>
-
+        <Icon style={styles.icon} name={langTag === 'he' ? "keyboard-arrow-left" : "keyboard-arrow-right"}/>
       </View>
     </TouchableOpacity>
   )

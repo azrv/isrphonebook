@@ -95,7 +95,7 @@ export default [
   {
     id: 3,
     images: [
-      'https://www.tellavista.com/blog/wp-content/uploads/2016/08/פארק-המים-חוף-גיא-טבריה-צילום-אילן-סגרון-10.jpg'
+      'https://www.secrettelaviv.com/wp-content/uploads/2015/07/333534532.jpg'
     ],
     title: {
       en: 'Shefayim Water Park',
@@ -118,6 +118,37 @@ export default [
     address: {
       en: '887641, Spain, Madrid, St. Antonio st., 96, block B',
       ru: '887641, Испания, Мадрид, ул. Святого Антонио, д. 96, блок Б',
+      he: '887641, ספרד, מדריד, רחוב סנט אנטוניו, 96, גוש B'
+    },
+    latitude: 37.78825,
+    longitude: -122.4324,
+  },
+  {
+    id: 4,
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/7/77/Laniado_Hospital_%282%29.jpg'
+    ],
+    title: {
+      en: 'Lanidao Hospital',
+      ru: 'Больница Ланидао',
+      he: '',
+    },
+    category: {
+      en: 'Health',
+      ru: 'Здоровье',
+      he: '',
+    },
+    description: {
+      en: 'Laniado Hospital, also known as the Sanz Medical Center, is a voluntary, not-for-profit hospital in Kiryat Sanz, Netanya, Israel, serving a regional population of over 450,000 in Netanya and the Sharon plain.',
+      ru: 'Израильская некоммерческая больница, расположенная в районе Кирьят-Санз в городе Нетания, седьмой по величине медицинский комплекс Израиля. Открытая в 1975 году раввином Екутиэль Йегуда Хальберштам, первым клаузенбургским ребе, больница Ланиадо управляется в соответствии с еврейским законом и известна как единственная больница в Израиле, которая никогда не закрывалась из-за забастовки.',
+      he: 'ישראל, הארץ המובטחת המקראית, היא כיום מדינה מודרנית, משגשגת, תוססת. במשך מאות שנים זה היה זירת האירועים המדהימים ביותר בתולדות האנושות. לבסוף הוחזרה ארץ זו לעם ישראל, שחזר ממאות התפזרות.',
+    },
+    phoneNumber: '972-9-8604666',
+    siteURL: 'http://www.en.laniado.org.il',
+    site: 'laniado.org.il',
+    address: {
+      en: 'Divrei Khayim St, 16, Netanya, Israel',
+      ru: 'Divrei Khayim, 16, Нетания, Израиль',
       he: '887641, ספרד, מדריד, רחוב סנט אנטוניו, 96, גוש B'
     },
     latitude: 37.78825,

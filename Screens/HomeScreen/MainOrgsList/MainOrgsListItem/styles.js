@@ -32,12 +32,21 @@ export default StyleSheet.create({
   },
   itemContentStatusContainer: {
     flex: 1,
-    justifyContent: 'flex-end',
+    flexDirection: 'row',
+    alignItems: 'flex-end',
   },
   itemContentStatus: {
     fontSize: 14,
     fontWeight: '600',
     color: '#777',
     textAlign: 'left',
+  },
+  itemContentStatusInfo: {
+    marginBottom: 1,
+    marginLeft: 3,
+    fontSize: 12,
+    color: '#777',
+    textAlign: 'left',
+    fontWeight: '300',
   },
 })
