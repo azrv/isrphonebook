@@ -10,13 +10,24 @@ import { Localize } from '../../../../src/localization/Localize';
 import { OrgContext } from '../../../Components/OrgContext';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import * as Localization from 'expo-localization';
+import { useNavigation } from '@react-navigation/native';
+import { ORG_ROUTE } from '../../../../src/routes'
 
 const langTag = Localization.locale.split('-')[0];
 
 const MainOrgsListItem = () => {
   const org = useContext(OrgContext);
+  const navigation = useNavigation();
+
   return (
-    <TouchableOpacity style={styles.itemContainer}>
+    <TouchableOpacity
+      style={styles.itemContainer}
+      onPress={() => {
+        navigation.navigate(ORG_ROUTE, {
+          organisationId: org.id,
+        })
+      }}
+    >
       <Image
         style={styles.itemImage}
         source={{

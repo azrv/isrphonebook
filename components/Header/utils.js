@@ -1,13 +1,20 @@
 import * as Localization from 'expo-localization';
 
-export const buildItems = (searchSuggestions, match) => {
+import { ORG_ROUTE } from '../../src/routes';
+
+export const buildOrgs = (searchSuggestions) => {
   const locale = Localization.locale.split('-')[0];
 
   return searchSuggestions.map((suggestion) => {
     return {
       id: `${suggestion.id}`,
       title: suggestion.title[locale],
-      match,
+      path: {
+        route: ORG_ROUTE,
+        params: {
+          organisationId: suggestion.id
+        },
+      },
     }
   })
 };

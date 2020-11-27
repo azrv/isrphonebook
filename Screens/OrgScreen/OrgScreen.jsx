@@ -3,10 +3,11 @@ import ScreenWrapper from '../Components/ScreenWrapper';
 import Organisation from './Organisation';
 import { OrgProvider } from '../Components/OrgContext';
 
-const OrgScreen = () => {
-  const organisationId = 0;
+const OrgScreen = ({
+  route
+}) => {
   return (
-    <OrgProvider orgId={organisationId}>
+    <OrgProvider orgId={route.params?.organisationId || 0}>
       <ScreenWrapper>
         <Organisation />
       </ScreenWrapper>

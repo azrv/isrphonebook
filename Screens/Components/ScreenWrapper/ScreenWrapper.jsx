@@ -1,21 +1,27 @@
 import React from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
 
+import Header from '../../../components/Header';
+
 const ScreenWrapper = ({
   children,
 }) => {
   return (
-    <ScrollView
-      style={wrapperStyles.scrollView}
-      decelerationRate="fast"
-      showsHorizontalScrollIndicator={false}
-    >
-      <View style={wrapperStyles.screenContainer}>
-        {children}
-      </View>
-    </ScrollView>
+    <>
+      <Header />
+      <ScrollView
+        style={wrapperStyles.scrollView}
+        decelerationRate="fast"
+        showsHorizontalScrollIndicator={false}
+      >
+        <View style={wrapperStyles.screenContainer}>
+          {children}
+        </View>
+      </ScrollView>
+    </>
   )
 };
+
 const wrapperStyles = StyleSheet.create({
   scrollView: {
     zIndex: 100,

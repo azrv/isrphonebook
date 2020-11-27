@@ -1,13 +1,18 @@
 import React from 'react'
-import { Text, View, Image, Dimensions } from 'react-native'
+import { Text, TouchableOpacity, View, Image, Dimensions } from 'react-native'
 import { ScrollView } from "react-native-gesture-handler"
 import styles from './styles';
 import TranslatedTitle from './TranslatedTitle';
+import { useNavigation } from '@react-navigation/native';
+import { ORG_ROUTE } from '../../../src/routes';
+
 const { width } = Dimensions.get("window");
 
 const Slider = ({
   items
 }) => {
+  const navigation = useNavigation();
+
   return (
     <View style={[styles.sliderContainer]}>
       <ScrollView
@@ -17,8 +22,13 @@ const Slider = ({
         showsHorizontalScrollIndicator={false}
       >
       {items.map((item, index) => (
-        <View
+        <TouchableOpacity
           key={index}
+          onPress={() => {
+            navigation.navigate(ORG_ROUTE, {
+              organisationId: item.id
+            })
+          }}
           style={ (index === items.length - 1) ? styles.lastSliderCard : styles.sliderCard}
         >
           <Image
@@ -32,7 +42,7 @@ const Slider = ({
               <TranslatedTitle item={item}/>
             </Text>
           </View>
-        </View>
+        </TouchableOpacity>
       ))}
       </ScrollView>
     </View>

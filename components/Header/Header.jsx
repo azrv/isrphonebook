@@ -6,7 +6,7 @@ import styles from './styles';
 import Overlay from './Overlay';
 import BackButton from './BackButton';
 import SearchResult from './Search/SearchResult'
-import { buildItems } from './utils';
+import { buildOrgs } from './utils';
 import UseOrganisationsSearch from '../../src/hooks/UseOrganisationsSearch';
 
 const paddingValue = new Animated.Value(30);
@@ -47,7 +47,7 @@ const Header = () => {
   const onKeywordChange = (text) => {
     const suggestions = search.searchBy(text);
 
-    setFoundItems(buildItems(suggestions, text));
+    setFoundItems(buildOrgs(suggestions));
   }
 
   withOverlay ? stretchInSearch() : stretchOutSearch();

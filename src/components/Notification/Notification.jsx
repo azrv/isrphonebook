@@ -11,7 +11,7 @@ export const NotificationContext = React.createContext();
 const NotificationProvider = ({
   children
 }) => {
-  const notificationTransformValue = useRef(new Animated.Value(0)).current;
+  const notificationTransformValue = useRef(new Animated.Value(-40)).current;
 
   const onAppearNotification = () => {
     Animated.timing(notificationTransformValue, {
@@ -24,7 +24,7 @@ const NotificationProvider = ({
 
   const onDisappearNotification = () => {
     Animated.timing(notificationTransformValue, {
-      toValue: 0,
+      toValue: -40,
       duration: 500,
       useNativeDriver: false,
       easing: Easing.in(Easing.elastic(0.7))

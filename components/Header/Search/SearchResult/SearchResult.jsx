@@ -15,7 +15,7 @@ const SearchResult = ({
         return (
           <ResultItem
             title={item.title}
-            match={item.match}
+            path={item.path}
           />
         )
       }}

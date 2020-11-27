@@ -21,16 +21,15 @@ const App = () => {
         <StatusBar barStyle={'light-content'} />
       </SafeAreaView>
       <SafeAreaView style={{flex: 1}}>
-        <Header />
         <NotificationProvider>
           <NavigationContainer>
               <Tab.Navigator
                 screenOptions={({ route }) => ({
                   tabBarIcon: ({ color, size }) => {
                     return <Ionicons
-                      name={ROUTES[route.name].icon}
-                      size={size}
-                      color={color}
+                    name={ROUTES[route.name].icon}
+                    size={size}
+                    color={color}
                     />;
                   },
                 })}
