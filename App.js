@@ -9,9 +9,7 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeScreen from './Screens/HomeScreen';
-import OrgScreen from './Screens/OrgScreen';
-import SettingsScreen from './Screens/SettingsScreen';
+import { ROUTES } from './src/routes';
 
 const Tab = createBottomTabNavigator();
 
@@ -28,17 +26,12 @@ const App = () => {
           <NavigationContainer>
               <Tab.Navigator
                 screenOptions={({ route }) => ({
-                  tabBarIcon: ({ focused, color, size }) => {
-                    let iconName;
-                    Localize('hello')
-                    if (route.name === 'PhoneBook') {
-                      iconName = focused ? 'ios-albums' : 'ios-albums';
-                    } else if (route.name === Localize('organisation')) {
-                      iconName = focused ? 'ios-list-box' : 'ios-list-box';
-                    } else if (route.name === Localize('settings')) {
-                      iconName = focused ? 'ios-settings' : 'ios-settings';
-                    }
-                    return <Ionicons name={iconName} size={size} color={color} />;
+                  tabBarIcon: ({ color, size }) => {
+                    return <Ionicons
+                      name={ROUTES[route.name].icon}
+                      size={size}
+                      color={color}
+                    />;
                   },
                 })}
 
@@ -47,18 +40,17 @@ const App = () => {
                   inactiveTintColor: '#666',
                 }}
               >
-                <Tab.Screen
-                  name="PhoneBook"
-                  component={HomeScreen}
-                />
-                <Tab.Screen
-                  name={Localize('organisation')}
-                  component={OrgScreen}
-                />
-                <Tab.Screen
-                  name={Localize('settings')}
-                  component={SettingsScreen}
-                />
+                {
+                  Object.entries(ROUTES).map(([name, { component }])  => {
+                    return (
+                      <Tab.Screen
+                        key={name}
+                        name={name}
+                        component={component}
+                      />
+                    )
+                  })
+                }
               </Tab.Navigator>
 
           </NavigationContainer>
